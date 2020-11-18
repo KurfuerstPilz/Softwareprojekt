@@ -24,12 +24,12 @@ Die gemachten Anpassungen sind vergleichbar mit denen die wir für die SBSFU Fir
 Wir haben unter Ubuntu 20.04 gearbeitet.
 
 Benötigte Software:
-	STM32CubeIDE
-	Python 2
-	STM32CubeProgrammer
-	ST-LINK-SERVER Software*
-	STSW-LINK007 Software*
-	Minicom (oder ähnliche ymodem fähige Terminals)
+- STM32CubeIDE
+- Python 2
+- TM32CubeProgrammer
+- ST-LINK-SERVER Software*
+- STSW-LINK007 Software*
+- Minicom (oder ähnliche ymodem fähige Terminals)
 
 Schritte:
 
