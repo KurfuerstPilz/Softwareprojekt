@@ -33,7 +33,7 @@ Benötigte Software:
 
 Schritte:
 
-1. Den Softwareorjekt Ordner entpacken
+~~1. Den Softwareorjekt Ordner entpacken~~ Nicht nötig wenn dieses Repo geklont wurde.
 
 2. STM32CubeIDE öffnen
 
