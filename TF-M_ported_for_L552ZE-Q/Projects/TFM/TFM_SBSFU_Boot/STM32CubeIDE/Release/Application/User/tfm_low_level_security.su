@@ -1,0 +1,2 @@
+tfm_low_level_security.c:70:6:TFM_LL_SECU_ApplyRunTimeProtections	8	static
+tfm_low_level_security.c:89:6:TFM_LL_SECU_CheckStaticProtections	24	static

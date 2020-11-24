@@ -1,0 +1,12 @@
+low_level_flash.c:224:27:Flash_GetVersion	8	static
+low_level_flash.c:229:31:Flash_GetCapabilities	0	static
+low_level_flash.c:241:16:Flash_Uninitialize	0	static
+low_level_flash.c:246:16:Flash_PowerControl	0	static
+low_level_flash.c:428:16:Flash_EraseChip	0	static
+low_level_flash.c:433:25:Flash_GetStatus	0	static
+low_level_flash.c:438:24:Flash_GetInfo	0	static
+low_level_flash.c:261:16:Flash_ReadData	8	static
+low_level_flash.c:234:16:Flash_Initialize	8	static
+low_level_flash.c:297:16:Flash_ProgramData	48	static
+low_level_flash.c:363:16:Flash_EraseSector	40	static
+low_level_flash.c:491:6:NMI_Handler	0	static,ignoring_inline_asm

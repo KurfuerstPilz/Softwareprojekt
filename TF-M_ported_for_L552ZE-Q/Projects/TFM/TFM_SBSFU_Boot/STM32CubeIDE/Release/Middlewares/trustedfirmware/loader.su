@@ -1,0 +1,7 @@
+loader.c:1849:1:boot_review_image_swap_types	12	static
+loader.c:414:1:boot_update_security_counter.constprop	24	static
+loader.c:230:1:boot_read_image_headers.constprop	48	static
+loader.c:358:1:boot_validate_slot.isra.2	56	static
+bootutil_priv.h:346:1:boot_initialize_area.constprop	16	static
+loader.c:799:1:boot_write_status	40	dynamic
+loader.c:2005:1:boot_go	96	static

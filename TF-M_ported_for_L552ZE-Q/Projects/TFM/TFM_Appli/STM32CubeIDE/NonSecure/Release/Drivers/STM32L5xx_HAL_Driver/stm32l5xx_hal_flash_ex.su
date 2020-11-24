@@ -1,0 +1,10 @@
+stm32l5xx_hal_flash_ex.c:723:13:FLASH_MassErase	0	static
+stm32l5xx_hal_flash_ex.c:304:19:HAL_FLASHEx_OBProgram	24	static
+stm32l5xx_hal_flash_ex.c:389:6:HAL_FLASHEx_OBGetConfig	0	static
+stm32l5xx_hal_flash_ex.c:564:6:HAL_FLASHEx_ConfigPrivMode	0	static
+stm32l5xx_hal_flash_ex.c:580:10:HAL_FLASHEx_GetPrivMode	0	static
+stm32l5xx_hal_flash_ex.c:644:19:HAL_FLASHEx_ConfigLVEPin	16	static
+stm32l5xx_hal_flash_ex.c:696:10:HAL_FLASHEx_GetLVEPin	0	static
+stm32l5xx_hal_flash_ex.c:779:6:FLASH_PageErase	0	static
+stm32l5xx_hal_flash_ex.c:168:19:HAL_FLASHEx_Erase	24	static
+stm32l5xx_hal_flash_ex.c:238:19:HAL_FLASHEx_Erase_IT	24	static

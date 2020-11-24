@@ -1,0 +1,14 @@
+low_level_com.c:62:27:USART_GetVersion	8	static
+low_level_com.c:67:31:USART_GetCapabilities	0	static
+low_level_com.c:129:16:USART0_Uninitialize	0	static
+low_level_com.c:135:16:USART0_PowerControl	0	static
+low_level_com.c:164:16:USART0_Transfer	0	static
+low_level_com.c:174:17:USART0_GetTxCount	0	static
+low_level_com.c:183:16:USART0_Control	0	static
+low_level_com.c:188:25:USART0_GetStatus	8	static
+low_level_com.c:200:31:USART0_GetModemStatus	8	static
+low_level_com.c:152:16:USART0_Receive	8	static
+low_level_com.c:140:16:USART0_Send	8	static
+low_level_com.c:89:16:USART0_Initialize	56	static
+low_level_com.c:194:16:USART0_SetModemControl	0	static
+low_level_com.c:179:17:USART0_GetRxCount	0	static

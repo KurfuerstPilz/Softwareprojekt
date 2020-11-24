@@ -30,7 +30,7 @@ fi
 echo Postbuild with python script
 imgtool=$basedir"/scripts/imgtool.py"
 assemble=$basedir"/scripts/assemble.py"
-cmd="python3"
+cmd="python"
 
 key_s=$basedir/root-rsa-3072.pem
 key_ns=$basedir/root-rsa-3072_1.pem
