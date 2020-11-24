@@ -132,6 +132,12 @@ int main(int argc, char **argv)
   */
   HAL_Init();
 
+  GPIO_InitTypeDef GPIO_InitStruct; 
+  GPIO_InitStruct.Pin = GPIO_PIN_5;
+ GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; // digital Output
+ GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+ HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
   /* Configure Communication module */
   COM_Init();
   /* test if an automatic test protection is launched */
@@ -162,10 +168,51 @@ int main(int argc, char **argv)
 void FW_APP_PrintMainMenu(void)
 {
   printf("\r\n=================== Main Menu ============================\r\n\n");
+  
+  printf("  Do stuff for testing bli bla blub --------------------- 0\r\n\n");
+
   printf("  Download a new Fw Image ------------------------------- 1\r\n\n");
   printf("  Test Protections -------------------------------------- 2\r\n\n");
   printf("  Test TFM ---------------------------------------------- 3\r\n\n");
   printf("  Selection :\r\n\n");
+}
+
+void Custom_Stuff_Run(){
+
+  printf("cool, but you can't return..\r\n\n");
+
+  HAL_Delay(5000);
+  printf("jk just press x\r\n\n");
+
+  uint8_t key = 0U;
+  uint8_t exit = 0U;
+
+  while (exit == 0U)
+  {
+    key = 0U;
+
+    /* Clean the input path */
+    COM_Flush();
+
+    /* Receive key */
+    if (COM_Receive(&key, 1U, RX_TIMEOUT) == HAL_OK)
+    {
+      switch (key)
+      {
+        case 'x' :
+          exit = 1U;
+          break;
+        default:
+          printf("Invalid Number ! press x to return \r");
+          break;
+      }
+      
+  printf("jk just press x\r\n\n");
+  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_5); //doenst work
+    HAL_Delay(100); //delay 100ms
+    }
+
+  }
 }
 
 /**
@@ -190,6 +237,9 @@ void FW_APP_Run(void)
   {
     switch (key)
     {
+      case '0' :
+        Custom_Stuff_Run();
+        break;
       case '1' :
         FW_UPDATE_Run();
         break;

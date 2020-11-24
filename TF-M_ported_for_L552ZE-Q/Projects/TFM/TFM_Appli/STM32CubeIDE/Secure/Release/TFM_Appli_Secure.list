@@ -10765,12 +10765,12 @@ Disassembly of section .ER_TFM_CODE:
 
 0c019748 <__do_global_dtors_aux>:
  c019748:	b510      	push	{r4, lr}
- c01974a:	4c05      	ldr	r4, [pc, #20]	; (c019760 <__exidx_end+0x18>)
+ c01974a:	4c05      	ldr	r4, [pc, #20]	; (c019760 <__do_global_dtors_aux+0x18>)
  c01974c:	7823      	ldrb	r3, [r4, #0]
  c01974e:	b933      	cbnz	r3, c01975e <__do_global_dtors_aux+0x16>
- c019750:	4b04      	ldr	r3, [pc, #16]	; (c019764 <__exidx_end+0x1c>)
+ c019750:	4b04      	ldr	r3, [pc, #16]	; (c019764 <__do_global_dtors_aux+0x1c>)
  c019752:	b113      	cbz	r3, c01975a <__do_global_dtors_aux+0x12>
- c019754:	4804      	ldr	r0, [pc, #16]	; (c019768 <__exidx_end+0x20>)
+ c019754:	4804      	ldr	r0, [pc, #16]	; (c019768 <__do_global_dtors_aux+0x20>)
  c019756:	e000      	b.n	c01975a <__do_global_dtors_aux+0x12>
  c019758:	bf00      	nop
  c01975a:	2301      	movs	r3, #1

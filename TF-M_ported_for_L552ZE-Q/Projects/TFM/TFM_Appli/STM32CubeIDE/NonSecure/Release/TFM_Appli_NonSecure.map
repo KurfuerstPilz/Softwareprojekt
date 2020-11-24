@@ -2542,8 +2542,6 @@ Discarded input sections
                 0x0000000000000000        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
  .text.HAL_GPIO_WritePin
                 0x0000000000000000        0xa Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .text.HAL_GPIO_TogglePin
-                0x0000000000000000        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
  .text.HAL_GPIO_LockPin
                 0x0000000000000000       0x2a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
  .text.HAL_GPIO_EXTI_Rising_Callback
@@ -4391,7 +4389,7 @@ LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
 LOAD c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a
 END GROUP
 
-.text           0x0000000008038400     0x6d8c
+.text           0x0000000008038400     0x6ed8
  *(.vectors)
  .vectors       0x0000000008038400      0x1f4 Application/Startup/startup_stm32l5xx_ns.o
                 0x0000000008038400                __Vectors
@@ -4557,447 +4555,453 @@ END GROUP
  .text._write   0x0000000008038eec       0x2c Application/User/main.o
                 0x0000000008038eec                _write
  .text.FW_APP_PrintMainMenu
-                0x0000000008038f18       0x38 Application/User/main.o
+                0x0000000008038f18       0x44 Application/User/main.o
                 0x0000000008038f18                FW_APP_PrintMainMenu
+ .text.Custom_Stuff_Run
+                0x0000000008038f5c       0x80 Application/User/main.o
+                0x0000000008038f5c                Custom_Stuff_Run
  .text.FW_APP_Run
-                0x0000000008038f50       0x58 Application/User/main.o
-                0x0000000008038f50                FW_APP_Run
+                0x0000000008038fdc       0x60 Application/User/main.o
+                0x0000000008038fdc                FW_APP_Run
  .text.startup.main
-                0x0000000008038fa8       0x70 Application/User/main.o
-                0x0000000008038fa8                main
+                0x000000000803903c       0x88 Application/User/main.o
+                0x000000000803903c                main
  .text.mpu_armv8m_region_enable
-                0x0000000008039018       0x60 Application/User/mpu_armv8m_drv.o
-                0x0000000008039018                mpu_armv8m_region_enable
+                0x00000000080390c4       0x60 Application/User/mpu_armv8m_drv.o
+                0x00000000080390c4                mpu_armv8m_region_enable
  .text.NMI_Handler
-                0x0000000008039078        0x2 Application/User/stm32l5xx_it.o
-                0x0000000008039078                NMI_Handler
+                0x0000000008039124        0x2 Application/User/stm32l5xx_it.o
+                0x0000000008039124                NMI_Handler
  .text.HardFault_Handler
-                0x000000000803907a        0x2 Application/User/stm32l5xx_it.o
-                0x000000000803907a                HardFault_Handler
+                0x0000000008039126        0x2 Application/User/stm32l5xx_it.o
+                0x0000000008039126                HardFault_Handler
  .text.MemManage_Handler
-                0x000000000803907c        0x2 Application/User/stm32l5xx_it.o
-                0x000000000803907c                MemManage_Handler
+                0x0000000008039128        0x2 Application/User/stm32l5xx_it.o
+                0x0000000008039128                MemManage_Handler
  .text.BusFault_Handler
-                0x000000000803907e        0x2 Application/User/stm32l5xx_it.o
-                0x000000000803907e                BusFault_Handler
+                0x000000000803912a        0x2 Application/User/stm32l5xx_it.o
+                0x000000000803912a                BusFault_Handler
  .text.UsageFault_Handler
-                0x0000000008039080        0x2 Application/User/stm32l5xx_it.o
-                0x0000000008039080                UsageFault_Handler
+                0x000000000803912c        0x2 Application/User/stm32l5xx_it.o
+                0x000000000803912c                UsageFault_Handler
  .text.DebugMon_Handler
-                0x0000000008039082        0x2 Application/User/stm32l5xx_it.o
-                0x0000000008039082                DebugMon_Handler
+                0x000000000803912e        0x2 Application/User/stm32l5xx_it.o
+                0x000000000803912e                DebugMon_Handler
  .text.SysTick_Handler
-                0x0000000008039084        0x4 Application/User/stm32l5xx_it.o
-                0x0000000008039084                SysTick_Handler
+                0x0000000008039130        0x4 Application/User/stm32l5xx_it.o
+                0x0000000008039130                SysTick_Handler
  .text.FLASH_IRQHandler
-                0x0000000008039088        0x4 Application/User/stm32l5xx_it.o
-                0x0000000008039088                FLASH_IRQHandler
+                0x0000000008039134        0x4 Application/User/stm32l5xx_it.o
+                0x0000000008039134                FLASH_IRQHandler
  .text.SystemInit
-                0x000000000803908c       0x1c Application/User/system_stm32l5xx.o
-                0x000000000803908c                SystemInit
+                0x0000000008039138       0x1c Application/User/system_stm32l5xx.o
+                0x0000000008039138                SystemInit
  .text.SystemCoreClockUpdate
-                0x00000000080390a8       0x9c Application/User/system_stm32l5xx.o
-                0x00000000080390a8                SystemCoreClockUpdate
+                0x0000000008039154       0x9c Application/User/system_stm32l5xx.o
+                0x0000000008039154                SystemCoreClockUpdate
  .text.TEST_PROTECTIONS_PrintTestingMenu
-                0x0000000008039144       0x30 Application/User/test_protections.o
+                0x00000000080391f0       0x30 Application/User/test_protections.o
  .text.TEST_PROTECTIONS_Run_SecUserMem
-                0x0000000008039174      0x1bc Application/User/test_protections.o
-                0x0000000008039174                TEST_PROTECTIONS_Run_SecUserMem
+                0x0000000008039220      0x1bc Application/User/test_protections.o
+                0x0000000008039220                TEST_PROTECTIONS_Run_SecUserMem
  .text.TEST_PROTECTIONS_Run
-                0x0000000008039330       0xd0 Application/User/test_protections.o
-                0x0000000008039330                TEST_PROTECTIONS_Run
+                0x00000000080393dc       0xd0 Application/User/test_protections.o
+                0x00000000080393dc                TEST_PROTECTIONS_Run
  .text.tfm_app_print_menu
-                0x0000000008039400       0x94 Application/User/tfm_app.o
+                0x00000000080394ac       0x94 Application/User/tfm_app.o
  .text.tfm_sst_set_uid.isra.0
-                0x0000000008039494       0x44 Application/User/tfm_app.o
+                0x0000000008039540       0x44 Application/User/tfm_app.o
  .text.tfm_sst_read_uid.isra.1
-                0x00000000080394d8       0x78 Application/User/tfm_app.o
+                0x0000000008039584       0x78 Application/User/tfm_app.o
  .text.tfm_its_set_uid.isra.3
-                0x0000000008039550       0x44 Application/User/tfm_app.o
+                0x00000000080395fc       0x44 Application/User/tfm_app.o
  .text.tfm_its_read_uid.isra.4
-                0x0000000008039594       0x80 Application/User/tfm_app.o
+                0x0000000008039640       0x80 Application/User/tfm_app.o
  .text.dump_eat_token
-                0x0000000008039614       0x54 Application/User/tfm_app.o
-                0x0000000008039614                dump_eat_token
+                0x00000000080396c0       0x54 Application/User/tfm_app.o
+                0x00000000080396c0                dump_eat_token
  .text.tfm_eat_test_circuit_sig.isra.6.constprop.7
-                0x0000000008039668       0xb4 Application/User/tfm_app.o
+                0x0000000008039714       0xb4 Application/User/tfm_app.o
  .text.tfm_app_menu
-                0x000000000803971c      0x3d4 Application/User/tfm_app.o
-                0x000000000803971c                tfm_app_menu
+                0x00000000080397c8      0x3d4 Application/User/tfm_app.o
+                0x00000000080397c8                tfm_app_menu
  .text.tfm_ns_interface_dispatch
-                0x0000000008039af0       0x30 Application/User/tfm_ns_lock.o
-                0x0000000008039af0                tfm_ns_interface_dispatch
+                0x0000000008039b9c       0x30 Application/User/tfm_ns_lock.o
+                0x0000000008039b9c                tfm_ns_interface_dispatch
  .text.Ymodem_Init
-                0x0000000008039b20       0x54 Application/User/ymodem.o
-                0x0000000008039b20                Ymodem_Init
+                0x0000000008039bcc       0x54 Application/User/ymodem.o
+                0x0000000008039bcc                Ymodem_Init
  .text.Ymodem_Receive
-                0x0000000008039b74      0x294 Application/User/ymodem.o
-                0x0000000008039b74                Ymodem_Receive
+                0x0000000008039c20      0x294 Application/User/ymodem.o
+                0x0000000008039c20                Ymodem_Receive
  .text.HAL_MspInit
-                0x0000000008039e08        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
-                0x0000000008039e08                HAL_MspInit
- *fill*         0x0000000008039e0a        0x2 
+                0x0000000008039eb4        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x0000000008039eb4                HAL_MspInit
+ *fill*         0x0000000008039eb6        0x2 
  .text.HAL_InitTick
-                0x0000000008039e0c       0x4c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
-                0x0000000008039e0c                HAL_InitTick
+                0x0000000008039eb8       0x4c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x0000000008039eb8                HAL_InitTick
  .text.HAL_Init
-                0x0000000008039e58       0x22 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
-                0x0000000008039e58                HAL_Init
- *fill*         0x0000000008039e7a        0x2 
+                0x0000000008039f04       0x22 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x0000000008039f04                HAL_Init
+ *fill*         0x0000000008039f26        0x2 
  .text.HAL_IncTick
-                0x0000000008039e7c       0x18 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
-                0x0000000008039e7c                HAL_IncTick
+                0x0000000008039f28       0x18 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x0000000008039f28                HAL_IncTick
  .text.HAL_GetTick
-                0x0000000008039e94        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
-                0x0000000008039e94                HAL_GetTick
+                0x0000000008039f40        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x0000000008039f40                HAL_GetTick
  .text.HAL_Delay
-                0x0000000008039ea0       0x24 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
-                0x0000000008039ea0                HAL_Delay
+                0x0000000008039f4c       0x24 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x0000000008039f4c                HAL_Delay
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0000000008039ec4       0x24 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
-                0x0000000008039ec4                HAL_NVIC_SetPriorityGrouping
+                0x0000000008039f70       0x24 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+                0x0000000008039f70                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x0000000008039ee8       0x68 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
-                0x0000000008039ee8                HAL_NVIC_SetPriority
+                0x0000000008039f94       0x68 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+                0x0000000008039f94                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x0000000008039f50       0x2c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
-                0x0000000008039f50                HAL_SYSTICK_Config
+                0x0000000008039ffc       0x2c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+                0x0000000008039ffc                HAL_SYSTICK_Config
  .text.CRC_Handle_8
-                0x0000000008039f7c       0x6a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+                0x000000000803a028       0x6a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
  .text.CRC_Handle_16
-                0x0000000008039fe6       0x2e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+                0x000000000803a092       0x2e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
  .text.HAL_CRC_MspInit
-                0x000000000803a014        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
-                0x000000000803a014                HAL_CRC_MspInit
- *fill*         0x000000000803a016        0x2 
+                0x000000000803a0c0        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+                0x000000000803a0c0                HAL_CRC_MspInit
+ *fill*         0x000000000803a0c2        0x2 
  .text.HAL_CRC_Init
-                0x000000000803a018       0x74 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
-                0x000000000803a018                HAL_CRC_Init
+                0x000000000803a0c4       0x74 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+                0x000000000803a0c4                HAL_CRC_Init
  .text.HAL_CRC_Calculate
-                0x000000000803a08c       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
-                0x000000000803a08c                HAL_CRC_Calculate
+                0x000000000803a138       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+                0x000000000803a138                HAL_CRC_Calculate
  .text.HAL_CRCEx_Polynomial_Set
-                0x000000000803a0d4       0x44 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
-                0x000000000803a0d4                HAL_CRCEx_Polynomial_Set
+                0x000000000803a180       0x44 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+                0x000000000803a180                HAL_CRCEx_Polynomial_Set
  .text.HAL_FLASH_EndOfOperationCallback
-                0x000000000803a118        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a118                HAL_FLASH_EndOfOperationCallback
+                0x000000000803a1c4        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a1c4                HAL_FLASH_EndOfOperationCallback
  .text.HAL_FLASH_OperationErrorCallback
-                0x000000000803a11a        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a11a                HAL_FLASH_OperationErrorCallback
+                0x000000000803a1c6        0x2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a1c6                HAL_FLASH_OperationErrorCallback
  .text.HAL_FLASH_IRQHandler
-                0x000000000803a11c       0xb4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a11c                HAL_FLASH_IRQHandler
+                0x000000000803a1c8       0xb4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a1c8                HAL_FLASH_IRQHandler
  .text.HAL_FLASH_Unlock
-                0x000000000803a1d0       0x24 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a1d0                HAL_FLASH_Unlock
+                0x000000000803a27c       0x24 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a27c                HAL_FLASH_Unlock
  .text.HAL_FLASH_Lock
-                0x000000000803a1f4       0x18 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a1f4                HAL_FLASH_Lock
+                0x000000000803a2a0       0x18 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a2a0                HAL_FLASH_Lock
  .text.HAL_FLASH_GetError
-                0x000000000803a20c        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a20c                HAL_FLASH_GetError
+                0x000000000803a2b8        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a2b8                HAL_FLASH_GetError
  .text.FLASH_WaitForLastOperation
-                0x000000000803a218       0x58 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a218                FLASH_WaitForLastOperation
+                0x000000000803a2c4       0x58 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a2c4                FLASH_WaitForLastOperation
  .text.HAL_FLASH_Program
-                0x000000000803a270       0x70 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
-                0x000000000803a270                HAL_FLASH_Program
+                0x000000000803a31c       0x70 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x000000000803a31c                HAL_FLASH_Program
  .text.FLASH_MassErase
-                0x000000000803a2e0       0x44 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+                0x000000000803a38c       0x44 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
  .text.FLASH_PageErase
-                0x000000000803a324       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
-                0x000000000803a324                FLASH_PageErase
+                0x000000000803a3d0       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+                0x000000000803a3d0                FLASH_PageErase
  .text.HAL_FLASHEx_Erase
-                0x000000000803a36c       0x9c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
-                0x000000000803a36c                HAL_FLASHEx_Erase
+                0x000000000803a418       0x9c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+                0x000000000803a418                HAL_FLASHEx_Erase
  .text.HAL_GPIO_Init
-                0x000000000803a408      0x190 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
-                0x000000000803a408                HAL_GPIO_Init
+                0x000000000803a4b4      0x190 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+                0x000000000803a4b4                HAL_GPIO_Init
+ .text.HAL_GPIO_TogglePin
+                0x000000000803a644        0xc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+                0x000000000803a644                HAL_GPIO_TogglePin
  .text.HAL_PWREx_EnableVddIO2
-                0x000000000803a598       0x10 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
-                0x000000000803a598                HAL_PWREx_EnableVddIO2
+                0x000000000803a650       0x10 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+                0x000000000803a650                HAL_PWREx_EnableVddIO2
  .text.HAL_RCC_GetSysClockFreq
-                0x000000000803a5a8       0x9c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
-                0x000000000803a5a8                HAL_RCC_GetSysClockFreq
+                0x000000000803a660       0x9c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+                0x000000000803a660                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x000000000803a644       0x28 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
-                0x000000000803a644                HAL_RCC_GetPCLK1Freq
+                0x000000000803a6fc       0x28 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+                0x000000000803a6fc                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x000000000803a66c       0x28 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
-                0x000000000803a66c                HAL_RCC_GetPCLK2Freq
- *fill*         0x000000000803a694        0x4 
+                0x000000000803a724       0x28 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+                0x000000000803a724                HAL_RCC_GetPCLK2Freq
+ *fill*         0x000000000803a74c        0x4 
  .text.UART_SetConfig
-                0x000000000803a698      0xa08 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803a698                UART_SetConfig
+                0x000000000803a750      0xa08 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803a750                UART_SetConfig
  .text.UART_AdvFeatureConfig
-                0x000000000803b0a0       0xaa Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803b0a0                UART_AdvFeatureConfig
+                0x000000000803b158       0xaa Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803b158                UART_AdvFeatureConfig
  .text.UART_WaitOnFlagUntilTimeout
-                0x000000000803b14a       0x8e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803b14a                UART_WaitOnFlagUntilTimeout
+                0x000000000803b202       0x8e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803b202                UART_WaitOnFlagUntilTimeout
  .text.HAL_UART_Transmit
-                0x000000000803b1d8       0xb8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803b1d8                HAL_UART_Transmit
+                0x000000000803b290       0xb8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803b290                HAL_UART_Transmit
  .text.HAL_UART_Receive
-                0x000000000803b290       0xec Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803b290                HAL_UART_Receive
+                0x000000000803b348       0xec Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803b348                HAL_UART_Receive
  .text.UART_CheckIdleState
-                0x000000000803b37c       0x66 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803b37c                UART_CheckIdleState
+                0x000000000803b434       0x66 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803b434                UART_CheckIdleState
  .text.HAL_UART_Init
-                0x000000000803b3e2       0x60 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
-                0x000000000803b3e2                HAL_UART_Init
+                0x000000000803b49a       0x60 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803b49a                HAL_UART_Init
  .text.UsefulBuf_CopyOffset
-                0x000000000803b442       0x3a Middlewares/trustedfirmware/core/UsefulBuf.o
-                0x000000000803b442                UsefulBuf_CopyOffset
+                0x000000000803b4fa       0x3a Middlewares/trustedfirmware/core/UsefulBuf.o
+                0x000000000803b4fa                UsefulBuf_CopyOffset
  .text.UsefulBuf_IsValue
-                0x000000000803b47c       0x34 Middlewares/trustedfirmware/core/UsefulBuf.o
-                0x000000000803b47c                UsefulBuf_IsValue
+                0x000000000803b534       0x34 Middlewares/trustedfirmware/core/UsefulBuf.o
+                0x000000000803b534                UsefulBuf_IsValue
  .text.psa_allocate_key
-                0x000000000803b4b0       0x4e Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b4b0                psa_allocate_key
+                0x000000000803b568       0x4e Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b568                psa_allocate_key
  .text.psa_import_key
-                0x000000000803b4fe       0x5a Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b4fe                psa_import_key
+                0x000000000803b5b6       0x5a Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b5b6                psa_import_key
  .text.psa_destroy_key
-                0x000000000803b558       0x50 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b558                psa_destroy_key
+                0x000000000803b610       0x50 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b610                psa_destroy_key
  .text.psa_get_key_information
-                0x000000000803b5a8       0x62 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b5a8                psa_get_key_information
+                0x000000000803b660       0x62 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b660                psa_get_key_information
  .text.psa_key_policy_set_usage
-                0x000000000803b60a        0x6 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b60a                psa_key_policy_set_usage
+                0x000000000803b6c2        0x6 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b6c2                psa_key_policy_set_usage
  .text.psa_set_key_policy
-                0x000000000803b610       0x58 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b610                psa_set_key_policy
+                0x000000000803b6c8       0x58 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b6c8                psa_set_key_policy
  .text.psa_cipher_set_iv
-                0x000000000803b668       0x60 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b668                psa_cipher_set_iv
+                0x000000000803b720       0x60 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b720                psa_cipher_set_iv
  .text.psa_cipher_encrypt_setup
-                0x000000000803b6c8       0x62 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b6c8                psa_cipher_encrypt_setup
+                0x000000000803b780       0x62 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b780                psa_cipher_encrypt_setup
  .text.psa_cipher_decrypt_setup
-                0x000000000803b72a       0x62 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b72a                psa_cipher_decrypt_setup
+                0x000000000803b7e2       0x62 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b7e2                psa_cipher_decrypt_setup
  .text.psa_cipher_update
-                0x000000000803b78c       0x6e Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b78c                psa_cipher_update
+                0x000000000803b844       0x6e Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b844                psa_cipher_update
  .text.psa_cipher_abort
-                0x000000000803b7fa       0x56 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b7fa                psa_cipher_abort
+                0x000000000803b8b2       0x56 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b8b2                psa_cipher_abort
  .text.psa_cipher_finish
-                0x000000000803b850       0x66 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b850                psa_cipher_finish
+                0x000000000803b908       0x66 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b908                psa_cipher_finish
  .text.psa_hash_setup
-                0x000000000803b8b6       0x5a Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b8b6                psa_hash_setup
+                0x000000000803b96e       0x5a Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b96e                psa_hash_setup
  .text.psa_hash_update
-                0x000000000803b910       0x60 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b910                psa_hash_update
+                0x000000000803b9c8       0x60 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803b9c8                psa_hash_update
  .text.psa_hash_verify
-                0x000000000803b970       0x60 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b970                psa_hash_verify
+                0x000000000803ba28       0x60 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803ba28                psa_hash_verify
  .text.psa_aead_encrypt
-                0x000000000803b9d0       0xac Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803b9d0                psa_aead_encrypt
+                0x000000000803ba88       0xac Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803ba88                psa_aead_encrypt
  .text.psa_aead_decrypt
-                0x000000000803ba7c       0xac Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
-                0x000000000803ba7c                psa_aead_decrypt
+                0x000000000803bb34       0xac Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x000000000803bb34                psa_aead_decrypt
  .text.psa_initial_attest_get_token
-                0x000000000803bb28       0x4a Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
-                0x000000000803bb28                psa_initial_attest_get_token
+                0x000000000803bbe0       0x4a Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+                0x000000000803bbe0                psa_initial_attest_get_token
  .text.psa_its_set
-                0x000000000803bb72       0x52 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
-                0x000000000803bb72                psa_its_set
+                0x000000000803bc2a       0x52 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+                0x000000000803bc2a                psa_its_set
  .text.psa_its_get
-                0x000000000803bbc4       0x64 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
-                0x000000000803bbc4                psa_its_get
+                0x000000000803bc7c       0x64 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+                0x000000000803bc7c                psa_its_get
  .text.psa_its_remove
-                0x000000000803bc28       0x3e Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
-                0x000000000803bc28                psa_its_remove
- *fill*         0x000000000803bc66        0x2 
+                0x000000000803bce0       0x3e Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+                0x000000000803bce0                psa_its_remove
+ *fill*         0x000000000803bd1e        0x2 
  .text.psa_connect
-                0x000000000803bc68       0x1c Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
-                0x000000000803bc68                psa_connect
+                0x000000000803bd20       0x1c Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+                0x000000000803bd20                psa_connect
  .text.psa_call
-                0x000000000803bc84       0x28 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
-                0x000000000803bc84                psa_call
+                0x000000000803bd3c       0x28 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+                0x000000000803bd3c                psa_call
  .text.psa_close
-                0x000000000803bcac       0x1c Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
-                0x000000000803bcac                psa_close
+                0x000000000803bd64       0x1c Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+                0x000000000803bd64                psa_close
  .text.psa_ps_set
-                0x000000000803bcc8       0x56 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
-                0x000000000803bcc8                psa_ps_set
+                0x000000000803bd80       0x56 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+                0x000000000803bd80                psa_ps_set
  .text.psa_ps_get
-                0x000000000803bd1e       0x58 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
-                0x000000000803bd1e                psa_ps_get
+                0x000000000803bdd6       0x58 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+                0x000000000803bdd6                psa_ps_get
  .text.psa_ps_remove
-                0x000000000803bd76       0x4a Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
-                0x000000000803bd76                psa_ps_remove
+                0x000000000803be2e       0x4a Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+                0x000000000803be2e                psa_ps_remove
  .text.psa_cipher_test
-                0x000000000803bdc0      0x3c8 Middlewares/trustedfirmware/test/crypto_tests_common.o
-                0x000000000803bdc0                psa_cipher_test
+                0x000000000803be78      0x3c8 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803be78                psa_cipher_test
  .text.psa_hash_test
-                0x000000000803c188      0x148 Middlewares/trustedfirmware/test/crypto_tests_common.o
-                0x000000000803c188                psa_hash_test
+                0x000000000803c240      0x148 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803c240                psa_hash_test
  .text.psa_aead_test
-                0x000000000803c2d0      0x260 Middlewares/trustedfirmware/test/crypto_tests_common.o
-                0x000000000803c2d0                psa_aead_test
+                0x000000000803c388      0x260 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803c388                psa_aead_test
  .text.print_error
-                0x000000000803c530       0x1c Middlewares/trustedfirmware/test/test_framework.o
+                0x000000000803c5e8       0x1c Middlewares/trustedfirmware/test/test_framework.o
  .text.set_test_failed
-                0x000000000803c54c       0x24 Middlewares/trustedfirmware/test/test_framework.o
-                0x000000000803c54c                set_test_failed
+                0x000000000803c604       0x24 Middlewares/trustedfirmware/test/test_framework.o
+                0x000000000803c604                set_test_failed
  .text.printf_set_color
-                0x000000000803c570        0xc Middlewares/trustedfirmware/test/test_framework_helpers.o
-                0x000000000803c570                printf_set_color
- .text.exit     0x000000000803c57c       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-exit.o)
-                0x000000000803c57c                exit
+                0x000000000803c628        0xc Middlewares/trustedfirmware/test/test_framework_helpers.o
+                0x000000000803c628                printf_set_color
+ .text.exit     0x000000000803c634       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-exit.o)
+                0x000000000803c634                exit
  .text.__libc_init_array
-                0x000000000803c5a4       0x48 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-init.o)
-                0x000000000803c5a4                __libc_init_array
- .text.memcmp   0x000000000803c5ec       0x1e c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcmp.o)
-                0x000000000803c5ec                memcmp
- .text.memcpy   0x000000000803c60a       0x16 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000000803c60a                memcpy
- .text.memset   0x000000000803c620       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memset.o)
-                0x000000000803c620                memset
- .text.printf   0x000000000803c630       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-printf.o)
-                0x000000000803c630                iprintf
-                0x000000000803c630                printf
- .text._puts_r  0x000000000803c660       0xb8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-puts.o)
-                0x000000000803c660                _puts_r
- .text.puts     0x000000000803c718       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-puts.o)
-                0x000000000803c718                puts
- .text.setvbuf  0x000000000803c728      0x158 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-setvbuf.o)
-                0x000000000803c728                setvbuf
- .text.strncmp  0x000000000803c880       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-strncmp.o)
-                0x000000000803c880                strncmp
+                0x000000000803c65c       0x48 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-init.o)
+                0x000000000803c65c                __libc_init_array
+ .text.memcmp   0x000000000803c6a4       0x1e c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcmp.o)
+                0x000000000803c6a4                memcmp
+ .text.memcpy   0x000000000803c6c2       0x16 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000000803c6c2                memcpy
+ .text.memset   0x000000000803c6d8       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memset.o)
+                0x000000000803c6d8                memset
+ .text.printf   0x000000000803c6e8       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-printf.o)
+                0x000000000803c6e8                iprintf
+                0x000000000803c6e8                printf
+ .text._puts_r  0x000000000803c718       0xb8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-puts.o)
+                0x000000000803c718                _puts_r
+ .text.puts     0x000000000803c7d0       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-puts.o)
+                0x000000000803c7d0                puts
+ .text.setvbuf  0x000000000803c7e0      0x158 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-setvbuf.o)
+                0x000000000803c7e0                setvbuf
+ .text.strncmp  0x000000000803c938       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-strncmp.o)
+                0x000000000803c938                strncmp
  .text.__swbuf_r
-                0x000000000803c8a4       0xa4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wbuf.o)
-                0x000000000803c8a4                __swbuf_r
+                0x000000000803c95c       0xa4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wbuf.o)
+                0x000000000803c95c                __swbuf_r
  .text.__swsetup_r
-                0x000000000803c948       0xdc c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wsetup.o)
-                0x000000000803c948                __swsetup_r
+                0x000000000803ca00       0xdc c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wsetup.o)
+                0x000000000803ca00                __swsetup_r
  .text.__sflush_r
-                0x000000000803ca24      0x108 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fflush.o)
-                0x000000000803ca24                __sflush_r
+                0x000000000803cadc      0x108 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fflush.o)
+                0x000000000803cadc                __sflush_r
  .text._fflush_r
-                0x000000000803cb2c       0x54 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fflush.o)
-                0x000000000803cb2c                _fflush_r
- .text.std      0x000000000803cb80       0x48 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803cbe4       0x54 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fflush.o)
+                0x000000000803cbe4                _fflush_r
+ .text.std      0x000000000803cc38       0x48 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
  .text._cleanup_r
-                0x000000000803cbc8        0xc c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803cbc8                _cleanup_r
+                0x000000000803cc80        0xc c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803cc80                _cleanup_r
  .text.__sfmoreglue
-                0x000000000803cbd4       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803cbd4                __sfmoreglue
- .text.__sinit  0x000000000803cc00       0x60 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803cc00                __sinit
- .text.__sfp    0x000000000803cc60       0x78 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803cc60                __sfp
+                0x000000000803cc8c       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803cc8c                __sfmoreglue
+ .text.__sinit  0x000000000803ccb8       0x60 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803ccb8                __sinit
+ .text.__sfp    0x000000000803cd18       0x78 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803cd18                __sfp
  .text._fwalk_reent
-                0x000000000803ccd8       0x3c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fwalk.o)
-                0x000000000803ccd8                _fwalk_reent
+                0x000000000803cd90       0x3c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fwalk.o)
+                0x000000000803cd90                _fwalk_reent
  .text.__swhatbuf_r
-                0x000000000803cd14       0x48 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-makebuf.o)
-                0x000000000803cd14                __swhatbuf_r
+                0x000000000803cdcc       0x48 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-makebuf.o)
+                0x000000000803cdcc                __swhatbuf_r
  .text.__smakebuf_r
-                0x000000000803cd5c       0x80 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-makebuf.o)
-                0x000000000803cd5c                __smakebuf_r
- .text.malloc   0x000000000803cddc       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-malloc.o)
-                0x000000000803cddc                malloc
- .text._free_r  0x000000000803cdec       0x9c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-freer.o)
-                0x000000000803cdec                _free_r
+                0x000000000803ce14       0x80 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-makebuf.o)
+                0x000000000803ce14                __smakebuf_r
+ .text.malloc   0x000000000803ce94       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-malloc.o)
+                0x000000000803ce94                malloc
+ .text._free_r  0x000000000803cea4       0x9c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-freer.o)
+                0x000000000803cea4                _free_r
  .text._malloc_r
-                0x000000000803ce88       0xb4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-mallocr.o)
-                0x000000000803ce88                _malloc_r
+                0x000000000803cf40       0xb4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x000000000803cf40                _malloc_r
  .text.__sfputc_r
-                0x000000000803cf3c       0x2e c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000803cff4       0x2e c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
  .text.__sfputs_r
-                0x000000000803cf6a       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
-                0x000000000803cf6a                __sfputs_r
- *fill*         0x000000000803cf8e        0x2 
+                0x000000000803d022       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000803d022                __sfputs_r
+ *fill*         0x000000000803d046        0x2 
  .text._vfprintf_r
-                0x000000000803cf90      0x22c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
-                0x000000000803cf90                _vfprintf_r
-                0x000000000803cf90                _vfiprintf_r
+                0x000000000803d048      0x22c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000803d048                _vfprintf_r
+                0x000000000803d048                _vfiprintf_r
  .text._printf_common
-                0x000000000803d1bc       0xf0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000803d1bc                _printf_common
+                0x000000000803d274       0xf0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000803d274                _printf_common
  .text._printf_i
-                0x000000000803d2ac      0x224 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
-                0x000000000803d2ac                _printf_i
- .text._sbrk_r  0x000000000803d4d0       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-sbrkr.o)
-                0x000000000803d4d0                _sbrk_r
- .text.__sread  0x000000000803d4f0       0x22 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
-                0x000000000803d4f0                __sread
+                0x000000000803d364      0x224 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000803d364                _printf_i
+ .text._sbrk_r  0x000000000803d588       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-sbrkr.o)
+                0x000000000803d588                _sbrk_r
+ .text.__sread  0x000000000803d5a8       0x22 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
+                0x000000000803d5a8                __sread
  .text.__swrite
-                0x000000000803d512       0x38 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
-                0x000000000803d512                __swrite
- .text.__sseek  0x000000000803d54a       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
-                0x000000000803d54a                __sseek
+                0x000000000803d5ca       0x38 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
+                0x000000000803d5ca                __swrite
+ .text.__sseek  0x000000000803d602       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
+                0x000000000803d602                __sseek
  .text.__sclose
-                0x000000000803d56e        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
-                0x000000000803d56e                __sclose
- *fill*         0x000000000803d576        0x2 
+                0x000000000803d626        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
+                0x000000000803d626                __sclose
+ *fill*         0x000000000803d62e        0x2 
  .text._write_r
-                0x000000000803d578       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-writer.o)
-                0x000000000803d578                _write_r
+                0x000000000803d630       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-writer.o)
+                0x000000000803d630                _write_r
  .text._close_r
-                0x000000000803d59c       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-closer.o)
-                0x000000000803d59c                _close_r
+                0x000000000803d654       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-closer.o)
+                0x000000000803d654                _close_r
  .text._fstat_r
-                0x000000000803d5bc       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fstatr.o)
-                0x000000000803d5bc                _fstat_r
+                0x000000000803d674       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fstatr.o)
+                0x000000000803d674                _fstat_r
  .text._isatty_r
-                0x000000000803d5e0       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-isattyr.o)
-                0x000000000803d5e0                _isatty_r
+                0x000000000803d698       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-isattyr.o)
+                0x000000000803d698                _isatty_r
  .text._lseek_r
-                0x000000000803d600       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-lseekr.o)
-                0x000000000803d600                _lseek_r
- .text.memchr   0x000000000803d624       0x1c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memchr-stub.o)
-                0x000000000803d624                memchr
+                0x000000000803d6b8       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-lseekr.o)
+                0x000000000803d6b8                _lseek_r
+ .text.memchr   0x000000000803d6dc       0x1c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memchr-stub.o)
+                0x000000000803d6dc                memchr
  .text.__malloc_lock
-                0x000000000803d640        0x2 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-mlock.o)
-                0x000000000803d640                __malloc_lock
+                0x000000000803d6f8        0x2 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-mlock.o)
+                0x000000000803d6f8                __malloc_lock
  .text.__malloc_unlock
-                0x000000000803d642        0x2 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-mlock.o)
-                0x000000000803d642                __malloc_unlock
- .text._read_r  0x000000000803d644       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-readr.o)
-                0x000000000803d644                _read_r
- .text          0x000000000803d668       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_aeabi_uldivmod.o)
-                0x000000000803d668                __aeabi_uldivmod
- .text          0x000000000803d698      0x2e0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_udivmoddi4.o)
-                0x000000000803d698                __udivmoddi4
- .text          0x000000000803d978        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_dvmd_tls.o)
-                0x000000000803d978                __aeabi_idiv0
-                0x000000000803d978                __aeabi_ldiv0
- .text._close   0x000000000803d97c       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(close.o)
-                0x000000000803d97c                _close
- .text._fstat   0x000000000803d98c       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(fstat.o)
-                0x000000000803d98c                _fstat
- .text._isatty  0x000000000803d99c       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(isatty.o)
-                0x000000000803d99c                _isatty
- .text._lseek   0x000000000803d9ac       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(lseek.o)
-                0x000000000803d9ac                _lseek
- .text._read    0x000000000803d9bc       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(read.o)
-                0x000000000803d9bc                _read
- .text._sbrk    0x000000000803d9cc       0x1c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(sbrk.o)
-                0x000000000803d9cc                _sbrk
- .text._exit    0x000000000803d9e8        0x2 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(_exit.o)
-                0x000000000803d9e8                _exit
+                0x000000000803d6fa        0x2 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-mlock.o)
+                0x000000000803d6fa                __malloc_unlock
+ .text._read_r  0x000000000803d6fc       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-readr.o)
+                0x000000000803d6fc                _read_r
+ .text          0x000000000803d720       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_aeabi_uldivmod.o)
+                0x000000000803d720                __aeabi_uldivmod
+ .text          0x000000000803d750      0x2e0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_udivmoddi4.o)
+                0x000000000803d750                __udivmoddi4
+ .text          0x000000000803da30        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_dvmd_tls.o)
+                0x000000000803da30                __aeabi_idiv0
+                0x000000000803da30                __aeabi_ldiv0
+ .text._close   0x000000000803da34       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(close.o)
+                0x000000000803da34                _close
+ .text._fstat   0x000000000803da44       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(fstat.o)
+                0x000000000803da44                _fstat
+ .text._isatty  0x000000000803da54       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(isatty.o)
+                0x000000000803da54                _isatty
+ .text._lseek   0x000000000803da64       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(lseek.o)
+                0x000000000803da64                _lseek
+ .text._read    0x000000000803da74       0x10 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(read.o)
+                0x000000000803da74                _read
+ .text._sbrk    0x000000000803da84       0x1c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(sbrk.o)
+                0x000000000803da84                _sbrk
+ .text._exit    0x000000000803daa0        0x2 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(_exit.o)
+                0x000000000803daa0                _exit
  *(.init)
- *fill*         0x000000000803d9ea        0x2 
- .init          0x000000000803d9ec        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crti.o
-                0x000000000803d9ec                _init
- .init          0x000000000803d9f0        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtn.o
+ *fill*         0x000000000803daa2        0x2 
+ .init          0x000000000803daa4        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crti.o
+                0x000000000803daa4                _init
+ .init          0x000000000803daa8        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtn.o
  *(.fini)
- .fini          0x000000000803d9f8        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crti.o
-                0x000000000803d9f8                _fini
- .fini          0x000000000803d9fc        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtn.o
+ .fini          0x000000000803dab0        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crti.o
+                0x000000000803dab0                _fini
+ .fini          0x000000000803dab4        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -5010,161 +5014,163 @@ END GROUP
  *(.dtors)
  *(.rodata*)
  .rodata.FLASH_If_Init.str1.1
-                0x000000000803da04       0x34 Application/User/flash_if.o
+                0x000000000803dabc       0x34 Application/User/flash_if.o
  .rodata.FW_UPDATE_DownloadNewFirmware.constprop.1.str1.1
-                0x000000000803da38       0xc8 Application/User/fw_update_app.o
+                0x000000000803daf0       0xc8 Application/User/fw_update_app.o
                                          0xcb (size before relaxing)
  .rodata.FW_UPDATE_PrintWelcome.str1.1
-                0x000000000803db00      0x137 Application/User/fw_update_app.o
+                0x000000000803dbb8      0x137 Application/User/fw_update_app.o
  .rodata.FW_UPDATE_Run.str1.1
-                0x000000000803dc37       0xb8 Application/User/fw_update_app.o
+                0x000000000803dcef       0xb8 Application/User/fw_update_app.o
+ .rodata.Custom_Stuff_Run.str1.1
+                0x000000000803dda7       0x56 Application/User/main.o
  .rodata.FW_APP_PrintMainMenu.str1.1
-                0x000000000803dcef      0x109 Application/User/main.o
+                0x000000000803ddfd      0x147 Application/User/main.o
  .rodata.FW_APP_Run.str1.1
-                0x000000000803ddf8       0x12 Application/User/main.o
+                0x000000000803df44       0x12 Application/User/main.o
  .rodata.UserAppId
-                0x000000000803ddf8        0x1 Application/User/main.o
-                0x000000000803ddf8                UserAppId
+                0x000000000803df44        0x1 Application/User/main.o
+                0x000000000803df44                UserAppId
  .rodata.main.str1.1
-                0x000000000803ddf9      0x129 Application/User/main.o
+                0x000000000803df45      0x129 Application/User/main.o
  .rodata.AHBPrescTable
-                0x000000000803df22       0x10 Application/User/system_stm32l5xx.o
-                0x000000000803df22                AHBPrescTable
+                0x000000000803e06e       0x10 Application/User/system_stm32l5xx.o
+                0x000000000803e06e                AHBPrescTable
  .rodata.APBPrescTable
-                0x000000000803df32        0x8 Application/User/system_stm32l5xx.o
-                0x000000000803df32                APBPrescTable
- *fill*         0x000000000803df3a        0x2 
+                0x000000000803e07e        0x8 Application/User/system_stm32l5xx.o
+                0x000000000803e07e                APBPrescTable
+ *fill*         0x000000000803e086        0x2 
  .rodata.MSIRangeTable
-                0x000000000803df3c       0x40 Application/User/system_stm32l5xx.o
-                0x000000000803df3c                MSIRangeTable
+                0x000000000803e088       0x40 Application/User/system_stm32l5xx.o
+                0x000000000803e088                MSIRangeTable
  .rodata.TEST_PROTECTIONS_PrintTestingMenu.str1.1
-                0x000000000803df7c       0xf9 Application/User/test_protections.o
+                0x000000000803e0c8       0xf9 Application/User/test_protections.o
  .rodata.TEST_PROTECTIONS_Run.str1.1
-                0x000000000803e075       0x72 Application/User/test_protections.o
+                0x000000000803e1c1       0x72 Application/User/test_protections.o
                                          0x84 (size before relaxing)
  .rodata.TEST_PROTECTIONS_Run_SecUserMem.str1.1
-                0x000000000803e0e7       0xb9 Application/User/test_protections.o
+                0x000000000803e233       0xb9 Application/User/test_protections.o
  .rodata.aProtectTests
-                0x000000000803e1a0      0x168 Application/User/test_protections.o
-                0x000000000803e1a0                aProtectTests
+                0x000000000803e2ec      0x168 Application/User/test_protections.o
+                0x000000000803e2ec                aProtectTests
  .rodata.aTestOperation
-                0x000000000803e308       0xa0 Application/User/test_protections.o
-                0x000000000803e308                aTestOperation
+                0x000000000803e454       0xa0 Application/User/test_protections.o
+                0x000000000803e454                aTestOperation
  .rodata.dump_eat_token.str1.1
-                0x000000000803e3a8        0x6 Application/User/tfm_app.o
+                0x000000000803e4f4        0x6 Application/User/tfm_app.o
                                           0x8 (size before relaxing)
  .rodata.tfm_app_menu.str1.1
-                0x000000000803e3ae      0x139 Application/User/tfm_app.o
+                0x000000000803e4fa      0x139 Application/User/tfm_app.o
                                         0x14b (size before relaxing)
  .rodata.tfm_app_print_menu.str1.1
-                0x000000000803e4e7      0x433 Application/User/tfm_app.o
+                0x000000000803e633      0x433 Application/User/tfm_app.o
  .rodata.tfm_eat_test_circuit_sig.isra.6.constprop.7.str1.1
-                0x000000000803e91a       0x42 Application/User/tfm_app.o
+                0x000000000803ea66       0x42 Application/User/tfm_app.o
  .rodata.tfm_sst_read_uid.isra.1.str1.1
-                0x000000000803e95c       0x2d Application/User/tfm_app.o
+                0x000000000803eaa8       0x2d Application/User/tfm_app.o
  .rodata.tfm_sst_set_uid.isra.0.str1.1
-                0x000000000803e989       0x1a Application/User/tfm_app.o
+                0x000000000803ead5       0x1a Application/User/tfm_app.o
  .rodata.Ymodem_Receive.str1.1
-                0x000000000803e9a3       0x18 Application/User/ymodem.o
+                0x000000000803eaef       0x18 Application/User/ymodem.o
  .rodata.CSWTCH.301
-                0x000000000803e9bb        0x4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803eb07        0x4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
  .rodata.CSWTCH.302
-                0x000000000803e9bf        0xd Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x000000000803eb0b        0xd Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
  .rodata.__func__.7640
-                0x000000000803e9cc       0x10 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803eb18       0x10 Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.__func__.7670
-                0x000000000803e9dc        0xe Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803eb28        0xe Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.__func__.7727
-                0x000000000803e9ea        0xe Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803eb36        0xe Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.hash_val
-                0x000000000803e9f8      0x140 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803eb44      0x140 Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.psa_aead_test.str1.1
-                0x000000000803eb38       0xca Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803ec84       0xca Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.psa_cipher_test.str1.1
-                0x000000000803ec02      0x22c Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803ed4e      0x22c Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.psa_hash_test.str1.1
-                0x000000000803ee2e       0x7a Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803ef7a       0x7a Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.psa_key_interface_test.str1.1
-                0x000000000803eea8      0x1b3 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803eff4      0x1b3 Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.str1.1
-                0x000000000803f05b       0x5c Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x000000000803f1a7       0x5c Middlewares/trustedfirmware/test/crypto_tests_common.o
  .rodata.print_error.str1.1
-                0x000000000803f0b7        0xf Middlewares/trustedfirmware/test/test_framework.o
+                0x000000000803f203        0xf Middlewares/trustedfirmware/test/test_framework.o
  .rodata.set_test_failed.str1.1
-                0x000000000803f0c6       0x22 Middlewares/trustedfirmware/test/test_framework.o
+                0x000000000803f212       0x22 Middlewares/trustedfirmware/test/test_framework.o
  .rodata.printf_set_color.str1.1
-                0x000000000803f0e8        0x7 Middlewares/trustedfirmware/test/test_framework_helpers.o
- *fill*         0x000000000803f0ef        0x1 
+                0x000000000803f234        0x7 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ *fill*         0x000000000803f23b        0x1 
  .rodata._global_impure_ptr
-                0x000000000803f0f0        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-impure.o)
-                0x000000000803f0f0                _global_impure_ptr
+                0x000000000803f23c        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-impure.o)
+                0x000000000803f23c                _global_impure_ptr
  .rodata.__sf_fake_stderr
-                0x000000000803f0f4       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803f0f4                __sf_fake_stderr
+                0x000000000803f240       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803f240                __sf_fake_stderr
  .rodata.__sf_fake_stdin
-                0x000000000803f114       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803f114                __sf_fake_stdin
+                0x000000000803f260       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803f260                __sf_fake_stdin
  .rodata.__sf_fake_stdout
-                0x000000000803f134       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
-                0x000000000803f134                __sf_fake_stdout
+                0x000000000803f280       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+                0x000000000803f280                __sf_fake_stdout
  .rodata._vfprintf_r.str1.1
-                0x000000000803f154       0x11 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+                0x000000000803f2a0       0x11 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
  .rodata._printf_i.str1.1
-                0x000000000803f165       0x22 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x000000000803f2b1       0x22 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(.eh_frame*)
- *fill*         0x000000000803f187        0x1 
- .eh_frame      0x000000000803f188        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
- .eh_frame      0x000000000803f188        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtend.o
+ *fill*         0x000000000803f2d3        0x1 
+ .eh_frame      0x000000000803f2d4        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
+ .eh_frame      0x000000000803f2d4        0x4 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtend.o
 
-.glue_7         0x000000000803f18c        0x0
- .glue_7        0x000000000803f18c        0x0 linker stubs
+.glue_7         0x000000000803f2d8        0x0
+ .glue_7        0x000000000803f2d8        0x0 linker stubs
 
-.glue_7t        0x000000000803f18c        0x0
- .glue_7t       0x000000000803f18c        0x0 linker stubs
+.glue_7t        0x000000000803f2d8        0x0
+ .glue_7t       0x000000000803f2d8        0x0 linker stubs
 
-.vfp11_veneer   0x000000000803f18c        0x0
- .vfp11_veneer  0x000000000803f18c        0x0 linker stubs
+.vfp11_veneer   0x000000000803f2d8        0x0
+ .vfp11_veneer  0x000000000803f2d8        0x0 linker stubs
 
-.v4_bx          0x000000000803f18c        0x0
- .v4_bx         0x000000000803f18c        0x0 linker stubs
+.v4_bx          0x000000000803f2d8        0x0
+ .v4_bx         0x000000000803f2d8        0x0 linker stubs
 
-.iplt           0x000000000803f18c        0x0
- .iplt          0x000000000803f18c        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
+.iplt           0x000000000803f2d8        0x0
+ .iplt          0x000000000803f2d8        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000000000803f18c                __exidx_start = .
+                0x000000000803f2d8                __exidx_start = .
 
-.ARM.exidx      0x000000000803f18c        0x8
+.ARM.exidx      0x000000000803f2d8        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000000000803f18c        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp/crt0.o
- .ARM.exidx     0x000000000803f194        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x000000000803f2d8        0x8 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp/crt0.o
+ .ARM.exidx     0x000000000803f2e0        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_udivmoddi4.o)
                                           0x8 (size before relaxing)
-                0x000000000803f194                __exidx_end = .
+                0x000000000803f2e0                __exidx_end = .
 
-.rel.dyn        0x000000000803f194        0x0
- .rel.iplt      0x000000000803f194        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
+.rel.dyn        0x000000000803f2e0        0x0
+ .rel.iplt      0x000000000803f2e0        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
 
-.copy.table     0x000000000803f194       0x18
-                0x000000000803f194                . = ALIGN (0x4)
-                0x000000000803f194                __copy_table_start__ = .
-                0x000000000803f194        0x4 LONG 0x803f1bc __etext
-                0x000000000803f198        0x4 LONG 0x20000100 __data_start__
-                0x000000000803f19c        0x4 LONG 0x94 (__data_end__ - __data_start__)
-                0x000000000803f1a0        0x4 LONG 0x0 DEFINED (__etext2)?__etext2:0x0
-                0x000000000803f1a4        0x4 LONG 0x0 DEFINED (__data2_start__)?__data2_start__:0x0
-                0x000000000803f1a8        0x4 LONG 0x0 DEFINED (__data2_start__)?(__data2_end__ - __data2_start__):0x0
-                0x000000000803f1ac                __copy_table_end__ = .
+.copy.table     0x000000000803f2e0       0x18
+                0x000000000803f2e0                . = ALIGN (0x4)
+                0x000000000803f2e0                __copy_table_start__ = .
+                0x000000000803f2e0        0x4 LONG 0x803f308 __etext
+                0x000000000803f2e4        0x4 LONG 0x20000100 __data_start__
+                0x000000000803f2e8        0x4 LONG 0x94 (__data_end__ - __data_start__)
+                0x000000000803f2ec        0x4 LONG 0x0 DEFINED (__etext2)?__etext2:0x0
+                0x000000000803f2f0        0x4 LONG 0x0 DEFINED (__data2_start__)?__data2_start__:0x0
+                0x000000000803f2f4        0x4 LONG 0x0 DEFINED (__data2_start__)?(__data2_end__ - __data2_start__):0x0
+                0x000000000803f2f8                __copy_table_end__ = .
 
-.zero.table     0x000000000803f1ac       0x10
-                0x000000000803f1ac                . = ALIGN (0x4)
-                0x000000000803f1ac                __zero_table_start__ = .
-                0x000000000803f1ac        0x4 LONG 0x20000194 __bss_start__
-                0x000000000803f1b0        0x4 LONG 0x540 (__bss_end__ - __bss_start__)
-                0x000000000803f1b4        0x4 LONG 0x0 DEFINED (__bss2_start__)?__bss2_start__:0x0
-                0x000000000803f1b8        0x4 LONG 0x0 DEFINED (__bss2_start__)?(__bss2_end__ - __bss2_start__):0x0
-                0x000000000803f1bc                __zero_table_end__ = .
-                0x000000000803f1bc                __etext = .
+.zero.table     0x000000000803f2f8       0x10
+                0x000000000803f2f8                . = ALIGN (0x4)
+                0x000000000803f2f8                __zero_table_start__ = .
+                0x000000000803f2f8        0x4 LONG 0x20000194 __bss_start__
+                0x000000000803f2fc        0x4 LONG 0x540 (__bss_end__ - __bss_start__)
+                0x000000000803f300        0x4 LONG 0x0 DEFINED (__bss2_start__)?__bss2_start__:0x0
+                0x000000000803f304        0x4 LONG 0x0 DEFINED (__bss2_start__)?(__bss2_end__ - __bss2_start__):0x0
+                0x000000000803f308                __zero_table_end__ = .
+                0x000000000803f308                __etext = .
 
 .testprotection
                 0x0000000020000000        0x4
@@ -5172,7 +5178,7 @@ END GROUP
  .bss.NoInit    0x0000000020000000        0x4 Application/User/main.o
                 0x0000000020000000                TestNumber
 
-.data           0x0000000020000100       0x94 load address 0x000000000803f1bc
+.data           0x0000000020000100       0x94 load address 0x000000000803f308
                 0x0000000020000100                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -5212,10 +5218,10 @@ END GROUP
                 0x0000000020000194                . = ALIGN (0x4)
                 0x0000000020000194                __data_end__ = .
 
-.igot.plt       0x0000000020000194        0x0 load address 0x000000000803f250
+.igot.plt       0x0000000020000194        0x0 load address 0x000000000803f39c
  .igot.plt      0x0000000020000194        0x0 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp/crtbegin.o
 
-.bss            0x0000000020000194      0x540 load address 0x000000000803f250
+.bss            0x0000000020000194      0x540 load address 0x000000000803f39c
                 0x0000000020000194                . = ALIGN (0x4)
                 0x0000000020000194                __bss_start__ = .
  *(.bss*)
@@ -5257,18 +5263,18 @@ END GROUP
                 0x00000000200006d4                __bss_end__ = .
                 0x0000000000000540                bss_size = (__bss_end__ - __bss_start__)
 
-.msp_stack      0x00000000200006e0      0x400 load address 0x000000000803f7a0
+.msp_stack      0x00000000200006e0      0x400 load address 0x000000000803f900
                 0x0000000020000ae0                . = (. + __msp_stack_size__)
  *fill*         0x00000000200006e0      0x400 
                 0x0000000020000ae0                Image$$ARM_LIB_STACK_MSP$$ZI$$Limit = (ADDR (.msp_stack) + SIZEOF (.msp_stack))
 
-.psp_stack      0x0000000020000ae0      0xc00 load address 0x000000000803fba0
+.psp_stack      0x0000000020000ae0      0xc00 load address 0x000000000803fd00
                 0x00000000200016e0                . = (. + __psp_stack_size__)
  *fill*         0x0000000020000ae0      0xc00 
                 0x0000000020000ae0                Image$$ARM_LIB_STACK$$ZI$$Base = ADDR (.psp_stack)
                 0x00000000200016e0                Image$$ARM_LIB_STACK$$ZI$$Limit = (ADDR (.psp_stack) + SIZEOF (.psp_stack))
 
-.heap           0x00000000200016e0     0x1000 load address 0x00000000080407a0
+.heap           0x00000000200016e0     0x1000 load address 0x0000000008040900
                 0x00000000200016e0                __end__ = .
                 0x00000000200016e0                PROVIDE (end = .)
                 0x00000000200016e0                __HeapBase = .
@@ -5474,109 +5480,109 @@ OUTPUT(TFM_Appli_NonSecure.elf elf32-littlearm)
  .comment       0x000000000000007b       0x7c Middlewares/trustedfirmware/test/test_framework.o
  .comment       0x000000000000007b       0x7c Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_line     0x0000000000000000    0x13614
+.debug_line     0x0000000000000000    0x13647
  .debug_line    0x0000000000000000       0xf9 Application/Startup/startup_stm32l5xx_ns.o
  .debug_line    0x00000000000000f9      0xa38 Application/User/com.o
  .debug_line    0x0000000000000b31      0x9fd Application/User/common.o
  .debug_line    0x000000000000152e      0xad4 Application/User/flash_if.o
  .debug_line    0x0000000000002002      0xafa Application/User/fw_update_app.o
- .debug_line    0x0000000000002afc      0xa26 Application/User/main.o
- .debug_line    0x0000000000003522      0x844 Application/User/mpu_armv8m_drv.o
- .debug_line    0x0000000000003d66      0x801 Application/User/stm32l5xx_it.o
- .debug_line    0x0000000000004567      0x7d2 Application/User/system_stm32l5xx.o
- .debug_line    0x0000000000004d39      0xb1e Application/User/test_protections.o
- .debug_line    0x0000000000005857      0xf29 Application/User/tfm_app.o
- .debug_line    0x0000000000006780      0x895 Application/User/tfm_ns_lock.o
- .debug_line    0x0000000000007015      0xaa3 Application/User/ymodem.o
- .debug_line    0x0000000000007ab8      0xa3f Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
- .debug_line    0x00000000000084f7      0x99b Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
- .debug_line    0x0000000000008e92      0x8e7 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
- .debug_line    0x0000000000009779      0x7e9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
- .debug_line    0x0000000000009f62      0x971 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
- .debug_line    0x000000000000a8d3      0xa05 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
- .debug_line    0x000000000000b2d8      0x93e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .debug_line    0x000000000000bc16      0xc30 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
- .debug_line    0x000000000000c846      0xb99 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
- .debug_line    0x000000000000d3df     0x1872 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
- .debug_line    0x000000000000ec51      0x707 Middlewares/trustedfirmware/core/UsefulBuf.o
- .debug_line    0x000000000000f358      0xec8 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
- .debug_line    0x0000000000010220      0x76f Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
- .debug_line    0x000000000001098f      0x5d5 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
- .debug_line    0x0000000000010f64      0x53a Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
- .debug_line    0x000000000001149e      0x635 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
- .debug_line    0x0000000000011ad3      0xce4 Middlewares/trustedfirmware/test/crypto_tests_common.o
- .debug_line    0x00000000000127b7      0x7b4 Middlewares/trustedfirmware/test/test_framework.o
- .debug_line    0x0000000000012f6b      0x6a9 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_line    0x0000000000002afc      0xa59 Application/User/main.o
+ .debug_line    0x0000000000003555      0x844 Application/User/mpu_armv8m_drv.o
+ .debug_line    0x0000000000003d99      0x801 Application/User/stm32l5xx_it.o
+ .debug_line    0x000000000000459a      0x7d2 Application/User/system_stm32l5xx.o
+ .debug_line    0x0000000000004d6c      0xb1e Application/User/test_protections.o
+ .debug_line    0x000000000000588a      0xf29 Application/User/tfm_app.o
+ .debug_line    0x00000000000067b3      0x895 Application/User/tfm_ns_lock.o
+ .debug_line    0x0000000000007048      0xaa3 Application/User/ymodem.o
+ .debug_line    0x0000000000007aeb      0xa3f Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_line    0x000000000000852a      0x99b Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_line    0x0000000000008ec5      0x8e7 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_line    0x00000000000097ac      0x7e9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_line    0x0000000000009f95      0x971 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_line    0x000000000000a906      0xa05 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_line    0x000000000000b30b      0x93e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_line    0x000000000000bc49      0xc30 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_line    0x000000000000c879      0xb99 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_line    0x000000000000d412     0x1872 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_line    0x000000000000ec84      0x707 Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_line    0x000000000000f38b      0xec8 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_line    0x0000000000010253      0x76f Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_line    0x00000000000109c2      0x5d5 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_line    0x0000000000010f97      0x53a Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_line    0x00000000000114d1      0x635 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_line    0x0000000000011b06      0xce4 Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_line    0x00000000000127ea      0x7b4 Middlewares/trustedfirmware/test/test_framework.o
+ .debug_line    0x0000000000012f9e      0x6a9 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_info     0x0000000000000000    0x1d44d
+.debug_info     0x0000000000000000    0x1d6da
  .debug_info    0x0000000000000000       0x26 Application/Startup/startup_stm32l5xx_ns.o
  .debug_info    0x0000000000000026     0x17c3 Application/User/com.o
  .debug_info    0x00000000000017e9      0xb0b Application/User/common.o
  .debug_info    0x00000000000022f4     0x10a3 Application/User/flash_if.o
  .debug_info    0x0000000000003397     0x13cf Application/User/fw_update_app.o
- .debug_info    0x0000000000004766      0xd89 Application/User/main.o
- .debug_info    0x00000000000054ef      0x64d Application/User/mpu_armv8m_drv.o
- .debug_info    0x0000000000005b3c      0x2b9 Application/User/stm32l5xx_it.o
- .debug_info    0x0000000000005df5      0x8e6 Application/User/system_stm32l5xx.o
- .debug_info    0x00000000000066db     0x18cc Application/User/test_protections.o
- .debug_info    0x0000000000007fa7     0x1a64 Application/User/tfm_app.o
- .debug_info    0x0000000000009a0b      0x45d Application/User/tfm_ns_lock.o
- .debug_info    0x0000000000009e68     0x143f Application/User/ymodem.o
- .debug_info    0x000000000000b2a7      0xe8c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
- .debug_info    0x000000000000c133     0x1097 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
- .debug_info    0x000000000000d1ca      0x6cf Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
- .debug_info    0x000000000000d899      0x460 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
- .debug_info    0x000000000000dcf9      0x9b3 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
- .debug_info    0x000000000000e6ac      0xaef Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
- .debug_info    0x000000000000f19b      0x786 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .debug_info    0x000000000000f921      0xf7e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
- .debug_info    0x000000000001089f     0x130a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
- .debug_info    0x0000000000011ba9     0x22ad Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
- .debug_info    0x0000000000013e56      0xf51 Middlewares/trustedfirmware/core/UsefulBuf.o
- .debug_info    0x0000000000014da7     0x37a1 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
- .debug_info    0x0000000000018548      0x384 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
- .debug_info    0x00000000000188cc      0x59f Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
- .debug_info    0x0000000000018e6b      0x351 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
- .debug_info    0x00000000000191bc      0x6ac Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
- .debug_info    0x0000000000019868     0x2482 Middlewares/trustedfirmware/test/crypto_tests_common.o
- .debug_info    0x000000000001bcea      0xdcc Middlewares/trustedfirmware/test/test_framework.o
- .debug_info    0x000000000001cab6      0x997 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_info    0x0000000000004766     0x1016 Application/User/main.o
+ .debug_info    0x000000000000577c      0x64d Application/User/mpu_armv8m_drv.o
+ .debug_info    0x0000000000005dc9      0x2b9 Application/User/stm32l5xx_it.o
+ .debug_info    0x0000000000006082      0x8e6 Application/User/system_stm32l5xx.o
+ .debug_info    0x0000000000006968     0x18cc Application/User/test_protections.o
+ .debug_info    0x0000000000008234     0x1a64 Application/User/tfm_app.o
+ .debug_info    0x0000000000009c98      0x45d Application/User/tfm_ns_lock.o
+ .debug_info    0x000000000000a0f5     0x143f Application/User/ymodem.o
+ .debug_info    0x000000000000b534      0xe8c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_info    0x000000000000c3c0     0x1097 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_info    0x000000000000d457      0x6cf Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_info    0x000000000000db26      0x460 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_info    0x000000000000df86      0x9b3 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_info    0x000000000000e939      0xaef Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_info    0x000000000000f428      0x786 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_info    0x000000000000fbae      0xf7e Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_info    0x0000000000010b2c     0x130a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_info    0x0000000000011e36     0x22ad Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_info    0x00000000000140e3      0xf51 Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_info    0x0000000000015034     0x37a1 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_info    0x00000000000187d5      0x384 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_info    0x0000000000018b59      0x59f Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_info    0x00000000000190f8      0x351 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_info    0x0000000000019449      0x6ac Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_info    0x0000000000019af5     0x2482 Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_info    0x000000000001bf77      0xdcc Middlewares/trustedfirmware/test/test_framework.o
+ .debug_info    0x000000000001cd43      0x997 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_abbrev   0x0000000000000000     0x4d0f
+.debug_abbrev   0x0000000000000000     0x4d52
  .debug_abbrev  0x0000000000000000       0x14 Application/Startup/startup_stm32l5xx_ns.o
  .debug_abbrev  0x0000000000000014      0x296 Application/User/com.o
  .debug_abbrev  0x00000000000002aa      0x1ee Application/User/common.o
  .debug_abbrev  0x0000000000000498      0x31c Application/User/flash_if.o
  .debug_abbrev  0x00000000000007b4      0x390 Application/User/fw_update_app.o
- .debug_abbrev  0x0000000000000b44      0x2a8 Application/User/main.o
- .debug_abbrev  0x0000000000000dec      0x208 Application/User/mpu_armv8m_drv.o
- .debug_abbrev  0x0000000000000ff4      0x133 Application/User/stm32l5xx_it.o
- .debug_abbrev  0x0000000000001127      0x156 Application/User/system_stm32l5xx.o
- .debug_abbrev  0x000000000000127d      0x3ab Application/User/test_protections.o
- .debug_abbrev  0x0000000000001628      0x41d Application/User/tfm_app.o
- .debug_abbrev  0x0000000000001a45      0x214 Application/User/tfm_ns_lock.o
- .debug_abbrev  0x0000000000001c59      0x308 Application/User/ymodem.o
- .debug_abbrev  0x0000000000001f61      0x2d3 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
- .debug_abbrev  0x0000000000002234      0x326 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
- .debug_abbrev  0x000000000000255a      0x229 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
- .debug_abbrev  0x0000000000002783      0x165 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
- .debug_abbrev  0x00000000000028e8      0x362 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
- .debug_abbrev  0x0000000000002c4a      0x2b8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
- .debug_abbrev  0x0000000000002f02      0x21a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .debug_abbrev  0x000000000000311c      0x29a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
- .debug_abbrev  0x00000000000033b6      0x2f8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
- .debug_abbrev  0x00000000000036ae      0x366 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
- .debug_abbrev  0x0000000000003a14      0x372 Middlewares/trustedfirmware/core/UsefulBuf.o
- .debug_abbrev  0x0000000000003d86      0x28a Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
- .debug_abbrev  0x0000000000004010      0x138 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
- .debug_abbrev  0x0000000000004148      0x137 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
- .debug_abbrev  0x000000000000427f      0x120 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
- .debug_abbrev  0x000000000000439f      0x139 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
- .debug_abbrev  0x00000000000044d8      0x3a8 Middlewares/trustedfirmware/test/crypto_tests_common.o
- .debug_abbrev  0x0000000000004880      0x2af Middlewares/trustedfirmware/test/test_framework.o
- .debug_abbrev  0x0000000000004b2f      0x1e0 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_abbrev  0x0000000000000b44      0x2eb Application/User/main.o
+ .debug_abbrev  0x0000000000000e2f      0x208 Application/User/mpu_armv8m_drv.o
+ .debug_abbrev  0x0000000000001037      0x133 Application/User/stm32l5xx_it.o
+ .debug_abbrev  0x000000000000116a      0x156 Application/User/system_stm32l5xx.o
+ .debug_abbrev  0x00000000000012c0      0x3ab Application/User/test_protections.o
+ .debug_abbrev  0x000000000000166b      0x41d Application/User/tfm_app.o
+ .debug_abbrev  0x0000000000001a88      0x214 Application/User/tfm_ns_lock.o
+ .debug_abbrev  0x0000000000001c9c      0x308 Application/User/ymodem.o
+ .debug_abbrev  0x0000000000001fa4      0x2d3 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_abbrev  0x0000000000002277      0x326 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_abbrev  0x000000000000259d      0x229 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_abbrev  0x00000000000027c6      0x165 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_abbrev  0x000000000000292b      0x362 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_abbrev  0x0000000000002c8d      0x2b8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_abbrev  0x0000000000002f45      0x21a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_abbrev  0x000000000000315f      0x29a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_abbrev  0x00000000000033f9      0x2f8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_abbrev  0x00000000000036f1      0x366 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_abbrev  0x0000000000003a57      0x372 Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_abbrev  0x0000000000003dc9      0x28a Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_abbrev  0x0000000000004053      0x138 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_abbrev  0x000000000000418b      0x137 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_abbrev  0x00000000000042c2      0x120 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_abbrev  0x00000000000043e2      0x139 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_abbrev  0x000000000000451b      0x3a8 Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_abbrev  0x00000000000048c3      0x2af Middlewares/trustedfirmware/test/test_framework.o
+ .debug_abbrev  0x0000000000004b72      0x1e0 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_aranges  0x0000000000000000      0xe40
+.debug_aranges  0x0000000000000000      0xe48
  .debug_aranges
                 0x0000000000000000       0x20 Application/Startup/startup_stm32l5xx_ns.o
  .debug_aranges
@@ -5588,61 +5594,61 @@ OUTPUT(TFM_Appli_NonSecure.elf elf32-littlearm)
  .debug_aranges
                 0x00000000000000e8       0x40 Application/User/fw_update_app.o
  .debug_aranges
-                0x0000000000000128       0x38 Application/User/main.o
+                0x0000000000000128       0x40 Application/User/main.o
  .debug_aranges
-                0x0000000000000160       0x40 Application/User/mpu_armv8m_drv.o
+                0x0000000000000168       0x40 Application/User/mpu_armv8m_drv.o
  .debug_aranges
-                0x00000000000001a0       0x50 Application/User/stm32l5xx_it.o
+                0x00000000000001a8       0x50 Application/User/stm32l5xx_it.o
  .debug_aranges
-                0x00000000000001f0       0x28 Application/User/system_stm32l5xx.o
+                0x00000000000001f8       0x28 Application/User/system_stm32l5xx.o
  .debug_aranges
-                0x0000000000000218       0x30 Application/User/test_protections.o
+                0x0000000000000220       0x30 Application/User/test_protections.o
  .debug_aranges
-                0x0000000000000248       0x58 Application/User/tfm_app.o
+                0x0000000000000250       0x58 Application/User/tfm_app.o
  .debug_aranges
-                0x00000000000002a0       0x28 Application/User/tfm_ns_lock.o
+                0x00000000000002a8       0x28 Application/User/tfm_ns_lock.o
  .debug_aranges
-                0x00000000000002c8       0x28 Application/User/ymodem.o
+                0x00000000000002d0       0x28 Application/User/ymodem.o
  .debug_aranges
-                0x00000000000002f0      0x138 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+                0x00000000000002f8      0x138 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
  .debug_aranges
-                0x0000000000000428       0x90 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+                0x0000000000000430       0x90 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
  .debug_aranges
-                0x00000000000004b8       0x58 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+                0x00000000000004c0       0x58 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
  .debug_aranges
-                0x0000000000000510       0x30 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+                0x0000000000000518       0x30 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
  .debug_aranges
-                0x0000000000000540       0x70 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+                0x0000000000000548       0x70 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
  .debug_aranges
-                0x00000000000005b0       0x68 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+                0x00000000000005b8       0x68 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
  .debug_aranges
-                0x0000000000000618       0x58 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+                0x0000000000000620       0x58 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
  .debug_aranges
-                0x0000000000000670      0x1a0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+                0x0000000000000678      0x1a0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
  .debug_aranges
-                0x0000000000000810       0x98 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+                0x0000000000000818       0x98 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
  .debug_aranges
-                0x00000000000008a8      0x1d8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+                0x00000000000008b0      0x1d8 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
  .debug_aranges
-                0x0000000000000a80       0x60 Middlewares/trustedfirmware/core/UsefulBuf.o
+                0x0000000000000a88       0x60 Middlewares/trustedfirmware/core/UsefulBuf.o
  .debug_aranges
-                0x0000000000000ae0      0x1a0 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+                0x0000000000000ae8      0x1a0 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
  .debug_aranges
-                0x0000000000000c80       0x28 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+                0x0000000000000c88       0x28 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
  .debug_aranges
-                0x0000000000000ca8       0x38 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+                0x0000000000000cb0       0x38 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
  .debug_aranges
-                0x0000000000000ce0       0x40 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+                0x0000000000000ce8       0x40 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
  .debug_aranges
-                0x0000000000000d20       0x50 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+                0x0000000000000d28       0x50 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
  .debug_aranges
-                0x0000000000000d70       0x60 Middlewares/trustedfirmware/test/crypto_tests_common.o
+                0x0000000000000d78       0x60 Middlewares/trustedfirmware/test/crypto_tests_common.o
  .debug_aranges
-                0x0000000000000dd0       0x40 Middlewares/trustedfirmware/test/test_framework.o
+                0x0000000000000dd8       0x40 Middlewares/trustedfirmware/test/test_framework.o
  .debug_aranges
-                0x0000000000000e10       0x30 Middlewares/trustedfirmware/test/test_framework_helpers.o
+                0x0000000000000e18       0x30 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_str      0x0000000000000000   0x10ebfb
+.debug_str      0x0000000000000000   0x10ec0c
  .debug_str     0x0000000000000000       0xbd Application/Startup/startup_stm32l5xx_ns.o
  .debug_str     0x00000000000000bd   0x100454 Application/User/com.o
                                      0x1008e1 (size before relaxing)
@@ -5652,125 +5658,125 @@ OUTPUT(TFM_Appli_NonSecure.elf elf32-littlearm)
                                      0x1002ba (size before relaxing)
  .debug_str     0x0000000000100cf3     0x11c0 Application/User/fw_update_app.o
                                      0x101537 (size before relaxing)
- .debug_str     0x0000000000101eb3      0x1d4 Application/User/main.o
-                                     0x1003cf (size before relaxing)
- .debug_str     0x0000000000102087      0x48d Application/User/mpu_armv8m_drv.o
+ .debug_str     0x0000000000101eb3      0x1f8 Application/User/main.o
+                                     0x1004a2 (size before relaxing)
+ .debug_str     0x00000000001020ab      0x48d Application/User/mpu_armv8m_drv.o
                                       0xfc101 (size before relaxing)
- .debug_str     0x0000000000102514      0x125 Application/User/stm32l5xx_it.o
+ .debug_str     0x0000000000102538      0x125 Application/User/stm32l5xx_it.o
                                       0xfbd95 (size before relaxing)
- .debug_str     0x0000000000102639       0xe7 Application/User/system_stm32l5xx.o
+ .debug_str     0x000000000010265d       0xe7 Application/User/system_stm32l5xx.o
                                       0xfc018 (size before relaxing)
- .debug_str     0x0000000000102720      0xc95 Application/User/test_protections.o
+ .debug_str     0x0000000000102744      0xc95 Application/User/test_protections.o
                                      0x102138 (size before relaxing)
- .debug_str     0x00000000001033b5     0x6354 Application/User/tfm_app.o
+ .debug_str     0x00000000001033d9     0x6354 Application/User/tfm_app.o
                                      0x10653a (size before relaxing)
- .debug_str     0x0000000000109709      0x43e Application/User/tfm_ns_lock.o
+ .debug_str     0x000000000010972d      0x43e Application/User/tfm_ns_lock.o
                                       0xfc490 (size before relaxing)
- .debug_str     0x0000000000109b47      0x2a1 Application/User/ymodem.o
+ .debug_str     0x0000000000109b6b      0x2a1 Application/User/ymodem.o
                                      0x100b1c (size before relaxing)
- .debug_str     0x0000000000109de8      0xb6c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_str     0x0000000000109e0c      0xb6c Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
                                       0xfcb1b (size before relaxing)
- .debug_str     0x000000000010a954      0x27b Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_str     0x000000000010a978      0x27b Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
                                       0xfc7eb (size before relaxing)
- .debug_str     0x000000000010abcf      0x123 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_str     0x000000000010abf3      0x123 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
                                       0xfbf5e (size before relaxing)
- .debug_str     0x000000000010acf2       0xb1 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_str     0x000000000010ad16       0xb1 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
                                       0xfbf04 (size before relaxing)
- .debug_str     0x000000000010ada3      0x1bb Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_str     0x000000000010adc7      0x1bb Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
                                       0xfc04b (size before relaxing)
- .debug_str     0x000000000010af5e      0x2bf Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_str     0x000000000010af82      0x2bf Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
                                       0xfc141 (size before relaxing)
- .debug_str     0x000000000010b21d      0x2cf Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_str     0x000000000010b241      0x2bc Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
                                       0xfc046 (size before relaxing)
- .debug_str     0x000000000010b4ec      0x778 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_str     0x000000000010b4fd      0x778 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
                                       0xfc780 (size before relaxing)
- .debug_str     0x000000000010bc64      0x4b9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_str     0x000000000010bc75      0x4b9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
                                       0xfc5ea (size before relaxing)
- .debug_str     0x000000000010c11d      0x9a2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_str     0x000000000010c12e      0x9a2 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
                                       0xfce14 (size before relaxing)
- .debug_str     0x000000000010cabf      0x2f0 Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_str     0x000000000010cad0      0x2f0 Middlewares/trustedfirmware/core/UsefulBuf.o
                                        0x76d3 (size before relaxing)
- .debug_str     0x000000000010cdaf     0x128d Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_str     0x000000000010cdc0     0x128d Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
                                        0xba7f (size before relaxing)
- .debug_str     0x000000000010e03c      0x108 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_str     0x000000000010e04d      0x108 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
                                        0x64a3 (size before relaxing)
- .debug_str     0x000000000010e144      0x119 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_str     0x000000000010e155      0x119 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
                                        0x4d3b (size before relaxing)
- .debug_str     0x000000000010e25d       0xcd Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_str     0x000000000010e26e       0xcd Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
                                        0x4707 (size before relaxing)
- .debug_str     0x000000000010e32a      0x124 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_str     0x000000000010e33b      0x124 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
                                        0x4d1d (size before relaxing)
- .debug_str     0x000000000010e44e      0x351 Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_str     0x000000000010e45f      0x351 Middlewares/trustedfirmware/test/crypto_tests_common.o
                                        0xe197 (size before relaxing)
- .debug_str     0x000000000010e79f      0x384 Middlewares/trustedfirmware/test/test_framework.o
+ .debug_str     0x000000000010e7b0      0x384 Middlewares/trustedfirmware/test/test_framework.o
                                        0x893f (size before relaxing)
- .debug_str     0x000000000010eb23       0xd8 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_str     0x000000000010eb34       0xd8 Middlewares/trustedfirmware/test/test_framework_helpers.o
                                        0x8601 (size before relaxing)
 
-.debug_loc      0x0000000000000000     0xaa1a
+.debug_loc      0x0000000000000000     0xaa39
  .debug_loc     0x0000000000000000      0x181 Application/User/com.o
  .debug_loc     0x0000000000000181      0x184 Application/User/common.o
  .debug_loc     0x0000000000000305      0x3b4 Application/User/flash_if.o
  .debug_loc     0x00000000000006b9      0x204 Application/User/fw_update_app.o
- .debug_loc     0x00000000000008bd       0xf7 Application/User/main.o
- .debug_loc     0x00000000000009b4      0x26a Application/User/mpu_armv8m_drv.o
- .debug_loc     0x0000000000000c1e       0xdf Application/User/system_stm32l5xx.o
- .debug_loc     0x0000000000000cfd      0x25d Application/User/test_protections.o
- .debug_loc     0x0000000000000f5a      0x427 Application/User/tfm_app.o
- .debug_loc     0x0000000000001381      0x152 Application/User/tfm_ns_lock.o
- .debug_loc     0x00000000000014d3      0x4fe Application/User/ymodem.o
- .debug_loc     0x00000000000019d1      0x232 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
- .debug_loc     0x0000000000001c03      0x443 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
- .debug_loc     0x0000000000002046      0x47a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
- .debug_loc     0x00000000000024c0      0x142 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
- .debug_loc     0x0000000000002602      0x390 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
- .debug_loc     0x0000000000002992      0x4c9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
- .debug_loc     0x0000000000002e5b      0x278 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .debug_loc     0x00000000000030d3      0x74a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
- .debug_loc     0x000000000000381d      0x7e9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
- .debug_loc     0x0000000000004006     0x1dd7 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
- .debug_loc     0x0000000000005ddd      0x49f Middlewares/trustedfirmware/core/UsefulBuf.o
- .debug_loc     0x000000000000627c     0x2a3d Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
- .debug_loc     0x0000000000008cb9      0x1a2 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
- .debug_loc     0x0000000000008e5b      0x325 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
- .debug_loc     0x0000000000009180      0x1ae Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
- .debug_loc     0x000000000000932e      0x38c Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
- .debug_loc     0x00000000000096ba     0x1060 Middlewares/trustedfirmware/test/crypto_tests_common.o
- .debug_loc     0x000000000000a71a      0x29d Middlewares/trustedfirmware/test/test_framework.o
- .debug_loc     0x000000000000a9b7       0x63 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_loc     0x00000000000008bd      0x116 Application/User/main.o
+ .debug_loc     0x00000000000009d3      0x26a Application/User/mpu_armv8m_drv.o
+ .debug_loc     0x0000000000000c3d       0xdf Application/User/system_stm32l5xx.o
+ .debug_loc     0x0000000000000d1c      0x25d Application/User/test_protections.o
+ .debug_loc     0x0000000000000f79      0x427 Application/User/tfm_app.o
+ .debug_loc     0x00000000000013a0      0x152 Application/User/tfm_ns_lock.o
+ .debug_loc     0x00000000000014f2      0x4fe Application/User/ymodem.o
+ .debug_loc     0x00000000000019f0      0x232 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_loc     0x0000000000001c22      0x443 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_loc     0x0000000000002065      0x47a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_loc     0x00000000000024df      0x142 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_loc     0x0000000000002621      0x390 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_loc     0x00000000000029b1      0x4c9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_loc     0x0000000000002e7a      0x278 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_loc     0x00000000000030f2      0x74a Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_loc     0x000000000000383c      0x7e9 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_loc     0x0000000000004025     0x1dd7 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_loc     0x0000000000005dfc      0x49f Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_loc     0x000000000000629b     0x2a3d Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_loc     0x0000000000008cd8      0x1a2 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_loc     0x0000000000008e7a      0x325 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_loc     0x000000000000919f      0x1ae Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_loc     0x000000000000934d      0x38c Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_loc     0x00000000000096d9     0x1060 Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_loc     0x000000000000a739      0x29d Middlewares/trustedfirmware/test/test_framework.o
+ .debug_loc     0x000000000000a9d6       0x63 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_ranges   0x0000000000000000     0x1020
+.debug_ranges   0x0000000000000000     0x1028
  .debug_ranges  0x0000000000000000       0xb0 Application/User/com.o
  .debug_ranges  0x00000000000000b0       0x18 Application/User/common.o
  .debug_ranges  0x00000000000000c8       0x60 Application/User/flash_if.o
  .debug_ranges  0x0000000000000128       0x50 Application/User/fw_update_app.o
- .debug_ranges  0x0000000000000178       0x28 Application/User/main.o
- .debug_ranges  0x00000000000001a0       0x30 Application/User/mpu_armv8m_drv.o
- .debug_ranges  0x00000000000001d0       0x40 Application/User/stm32l5xx_it.o
- .debug_ranges  0x0000000000000210       0x18 Application/User/system_stm32l5xx.o
- .debug_ranges  0x0000000000000228       0x48 Application/User/test_protections.o
- .debug_ranges  0x0000000000000270       0xe0 Application/User/tfm_app.o
- .debug_ranges  0x0000000000000350       0x18 Application/User/tfm_ns_lock.o
- .debug_ranges  0x0000000000000368       0x68 Application/User/ymodem.o
- .debug_ranges  0x00000000000003d0      0x128 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
- .debug_ranges  0x00000000000004f8      0x148 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
- .debug_ranges  0x0000000000000640       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
- .debug_ranges  0x0000000000000688       0x20 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
- .debug_ranges  0x00000000000006a8       0x60 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
- .debug_ranges  0x0000000000000708       0xe0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
- .debug_ranges  0x00000000000007e8       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .debug_ranges  0x0000000000000830      0x190 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
- .debug_ranges  0x00000000000009c0       0xb0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
- .debug_ranges  0x0000000000000a70      0x1e0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
- .debug_ranges  0x0000000000000c50       0x88 Middlewares/trustedfirmware/core/UsefulBuf.o
- .debug_ranges  0x0000000000000cd8      0x190 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
- .debug_ranges  0x0000000000000e68       0x18 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
- .debug_ranges  0x0000000000000e80       0x28 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
- .debug_ranges  0x0000000000000ea8       0x30 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
- .debug_ranges  0x0000000000000ed8       0x40 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
- .debug_ranges  0x0000000000000f18       0x98 Middlewares/trustedfirmware/test/crypto_tests_common.o
- .debug_ranges  0x0000000000000fb0       0x50 Middlewares/trustedfirmware/test/test_framework.o
- .debug_ranges  0x0000000000001000       0x20 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_ranges  0x0000000000000178       0x30 Application/User/main.o
+ .debug_ranges  0x00000000000001a8       0x30 Application/User/mpu_armv8m_drv.o
+ .debug_ranges  0x00000000000001d8       0x40 Application/User/stm32l5xx_it.o
+ .debug_ranges  0x0000000000000218       0x18 Application/User/system_stm32l5xx.o
+ .debug_ranges  0x0000000000000230       0x48 Application/User/test_protections.o
+ .debug_ranges  0x0000000000000278       0xe0 Application/User/tfm_app.o
+ .debug_ranges  0x0000000000000358       0x18 Application/User/tfm_ns_lock.o
+ .debug_ranges  0x0000000000000370       0x68 Application/User/ymodem.o
+ .debug_ranges  0x00000000000003d8      0x128 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_ranges  0x0000000000000500      0x148 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_ranges  0x0000000000000648       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_ranges  0x0000000000000690       0x20 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_ranges  0x00000000000006b0       0x60 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_ranges  0x0000000000000710       0xe0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_ranges  0x00000000000007f0       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_ranges  0x0000000000000838      0x190 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_ranges  0x00000000000009c8       0xb0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_ranges  0x0000000000000a78      0x1e0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_ranges  0x0000000000000c58       0x88 Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_ranges  0x0000000000000ce0      0x190 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_ranges  0x0000000000000e70       0x18 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_ranges  0x0000000000000e88       0x28 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_ranges  0x0000000000000eb0       0x30 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_ranges  0x0000000000000ee0       0x40 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_ranges  0x0000000000000f20       0x98 Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_ranges  0x0000000000000fb8       0x50 Middlewares/trustedfirmware/test/test_framework.o
+ .debug_ranges  0x0000000000001008       0x20 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
 .debug_macro    0x0000000000000000    0x2d604
  .debug_macro   0x0000000000000000      0x33c Application/User/com.o
@@ -5920,78 +5926,78 @@ OUTPUT(TFM_Appli_NonSecure.elf elf32-littlearm)
  .debug_macro   0x000000000002d3f3       0x29 Middlewares/trustedfirmware/test/test_framework.o
  .debug_macro   0x000000000002d41c      0x1e8 Middlewares/trustedfirmware/test/test_framework_helpers.o
 
-.debug_frame    0x0000000000000000     0x3010
+.debug_frame    0x0000000000000000     0x3038
  .debug_frame   0x0000000000000000       0xd0 Application/User/com.o
  .debug_frame   0x00000000000000d0       0x48 Application/User/common.o
  .debug_frame   0x0000000000000118       0x98 Application/User/flash_if.o
  .debug_frame   0x00000000000001b0       0xa8 Application/User/fw_update_app.o
- .debug_frame   0x0000000000000258       0x80 Application/User/main.o
- .debug_frame   0x00000000000002d8       0x78 Application/User/mpu_armv8m_drv.o
- .debug_frame   0x0000000000000350       0x90 Application/User/stm32l5xx_it.o
- .debug_frame   0x00000000000003e0       0x38 Application/User/system_stm32l5xx.o
- .debug_frame   0x0000000000000418       0x84 Application/User/test_protections.o
- .debug_frame   0x000000000000049c      0x150 Application/User/tfm_app.o
- .debug_frame   0x00000000000005ec       0x3c Application/User/tfm_ns_lock.o
- .debug_frame   0x0000000000000628       0x58 Application/User/ymodem.o
- .debug_frame   0x0000000000000680      0x2a0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
- .debug_frame   0x0000000000000920      0x120 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
- .debug_frame   0x0000000000000a40       0xec Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
- .debug_frame   0x0000000000000b2c       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
- .debug_frame   0x0000000000000b74      0x110 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
- .debug_frame   0x0000000000000c84       0xec Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
- .debug_frame   0x0000000000000d70       0xe4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
- .debug_frame   0x0000000000000e54      0x370 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
- .debug_frame   0x00000000000011c4      0x1a4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
- .debug_frame   0x0000000000001368      0x614 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
- .debug_frame   0x000000000000197c      0x130 Middlewares/trustedfirmware/core/UsefulBuf.o
- .debug_frame   0x0000000000001aac      0x6e8 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
- .debug_frame   0x0000000000002194       0x58 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
- .debug_frame   0x00000000000021ec       0xa0 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
- .debug_frame   0x000000000000228c       0x88 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
- .debug_frame   0x0000000000002314       0xe4 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
- .debug_frame   0x00000000000023f8      0x17c Middlewares/trustedfirmware/test/crypto_tests_common.o
- .debug_frame   0x0000000000002574       0x98 Middlewares/trustedfirmware/test/test_framework.o
- .debug_frame   0x000000000000260c       0x40 Middlewares/trustedfirmware/test/test_framework_helpers.o
- .debug_frame   0x000000000000264c       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-exit.o)
- .debug_frame   0x0000000000002674       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00000000000026a0       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcmp.o)
- .debug_frame   0x00000000000026cc       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00000000000026f4       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x0000000000002714       0x74 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-printf.o)
- .debug_frame   0x0000000000002788       0x3c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-puts.o)
- .debug_frame   0x00000000000027c4       0x38 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-setvbuf.o)
- .debug_frame   0x00000000000027fc       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-strncmp.o)
- .debug_frame   0x0000000000002824       0x40 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wbuf.o)
- .debug_frame   0x0000000000002864       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wsetup.o)
- .debug_frame   0x0000000000002890       0x68 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fflush.o)
- .debug_frame   0x00000000000028f8      0x11c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
- .debug_frame   0x0000000000002a14       0x54 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fwalk.o)
- .debug_frame   0x0000000000002a68       0x58 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-makebuf.o)
- .debug_frame   0x0000000000002ac0       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x0000000000002af0       0x38 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x0000000000002b28       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x0000000000002b54       0xac c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
- .debug_frame   0x0000000000002c00       0x60 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x0000000000002c60       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000000000002c8c       0x88 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
- .debug_frame   0x0000000000002d14       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-writer.o)
- .debug_frame   0x0000000000002d40       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-closer.o)
- .debug_frame   0x0000000000002d6c       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fstatr.o)
- .debug_frame   0x0000000000002d98       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-isattyr.o)
- .debug_frame   0x0000000000002dc4       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-lseekr.o)
- .debug_frame   0x0000000000002df0       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x0000000000002e18       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000000000002e48       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-readr.o)
- .debug_frame   0x0000000000002e74       0x5c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-reent.o)
- .debug_frame   0x0000000000002ed0       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x0000000000002efc       0x34 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x0000000000002f30       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(close.o)
- .debug_frame   0x0000000000002f50       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(fstat.o)
- .debug_frame   0x0000000000002f70       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(isatty.o)
- .debug_frame   0x0000000000002f90       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(lseek.o)
- .debug_frame   0x0000000000002fb0       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(read.o)
- .debug_frame   0x0000000000002fd0       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(sbrk.o)
- .debug_frame   0x0000000000002ff0       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000258       0xa8 Application/User/main.o
+ .debug_frame   0x0000000000000300       0x78 Application/User/mpu_armv8m_drv.o
+ .debug_frame   0x0000000000000378       0x90 Application/User/stm32l5xx_it.o
+ .debug_frame   0x0000000000000408       0x38 Application/User/system_stm32l5xx.o
+ .debug_frame   0x0000000000000440       0x84 Application/User/test_protections.o
+ .debug_frame   0x00000000000004c4      0x150 Application/User/tfm_app.o
+ .debug_frame   0x0000000000000614       0x3c Application/User/tfm_ns_lock.o
+ .debug_frame   0x0000000000000650       0x58 Application/User/ymodem.o
+ .debug_frame   0x00000000000006a8      0x2a0 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal.o
+ .debug_frame   0x0000000000000948      0x120 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_cortex.o
+ .debug_frame   0x0000000000000a68       0xec Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc.o
+ .debug_frame   0x0000000000000b54       0x48 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_crc_ex.o
+ .debug_frame   0x0000000000000b9c      0x110 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash.o
+ .debug_frame   0x0000000000000cac       0xec Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_flash_ex.o
+ .debug_frame   0x0000000000000d98       0xe4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_gpio.o
+ .debug_frame   0x0000000000000e7c      0x370 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_pwr_ex.o
+ .debug_frame   0x00000000000011ec      0x1a4 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_rcc.o
+ .debug_frame   0x0000000000001390      0x614 Drivers/STM32L5xx_HAL_Driver/stm32l5xx_hal_uart.o
+ .debug_frame   0x00000000000019a4      0x130 Middlewares/trustedfirmware/core/UsefulBuf.o
+ .debug_frame   0x0000000000001ad4      0x6e8 Middlewares/trustedfirmware/core/tfm_crypto_ipc_api.o
+ .debug_frame   0x00000000000021bc       0x58 Middlewares/trustedfirmware/core/tfm_initial_attestation_ipc_api.o
+ .debug_frame   0x0000000000002214       0xa0 Middlewares/trustedfirmware/core/tfm_its_ipc_api.o
+ .debug_frame   0x00000000000022b4       0x88 Middlewares/trustedfirmware/core/tfm_psa_ns_api.o
+ .debug_frame   0x000000000000233c       0xe4 Middlewares/trustedfirmware/core/tfm_sst_ipc_api.o
+ .debug_frame   0x0000000000002420      0x17c Middlewares/trustedfirmware/test/crypto_tests_common.o
+ .debug_frame   0x000000000000259c       0x98 Middlewares/trustedfirmware/test/test_framework.o
+ .debug_frame   0x0000000000002634       0x40 Middlewares/trustedfirmware/test/test_framework_helpers.o
+ .debug_frame   0x0000000000002674       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x000000000000269c       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000026c8       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcmp.o)
+ .debug_frame   0x00000000000026f4       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000000000000271c       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x000000000000273c       0x74 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-printf.o)
+ .debug_frame   0x00000000000027b0       0x3c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-puts.o)
+ .debug_frame   0x00000000000027ec       0x38 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-setvbuf.o)
+ .debug_frame   0x0000000000002824       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-strncmp.o)
+ .debug_frame   0x000000000000284c       0x40 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wbuf.o)
+ .debug_frame   0x000000000000288c       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-wsetup.o)
+ .debug_frame   0x00000000000028b8       0x68 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fflush.o)
+ .debug_frame   0x0000000000002920      0x11c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-findfp.o)
+ .debug_frame   0x0000000000002a3c       0x54 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fwalk.o)
+ .debug_frame   0x0000000000002a90       0x58 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-makebuf.o)
+ .debug_frame   0x0000000000002ae8       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000002b18       0x38 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x0000000000002b50       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000000000002b7c       0xac c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+ .debug_frame   0x0000000000002c28       0x60 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x0000000000002c88       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000002cb4       0x88 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-stdio.o)
+ .debug_frame   0x0000000000002d3c       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-writer.o)
+ .debug_frame   0x0000000000002d68       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-closer.o)
+ .debug_frame   0x0000000000002d94       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-fstatr.o)
+ .debug_frame   0x0000000000002dc0       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-isattyr.o)
+ .debug_frame   0x0000000000002dec       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-lseekr.o)
+ .debug_frame   0x0000000000002e18       0x28 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x0000000000002e40       0x30 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000002e70       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-readr.o)
+ .debug_frame   0x0000000000002e9c       0x5c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x0000000000002ef8       0x2c c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000002f24       0x34 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v8-m.main/fpv5-sp/softfp\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000002f58       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(close.o)
+ .debug_frame   0x0000000000002f78       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(fstat.o)
+ .debug_frame   0x0000000000002f98       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(isatty.o)
+ .debug_frame   0x0000000000002fb8       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(lseek.o)
+ .debug_frame   0x0000000000002fd8       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(read.o)
+ .debug_frame   0x0000000000002ff8       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(sbrk.o)
+ .debug_frame   0x0000000000003018       0x20 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(_exit.o)
 
 .stab           0x0000000000000000       0x84
  .stab          0x0000000000000000       0x24 c:/st/stm32cubeide_1.5.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main/fpv5-sp/softfp\libnosys.a(close.o)
